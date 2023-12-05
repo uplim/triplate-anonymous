@@ -3,7 +3,7 @@
   "plugins": [
     "unicorn"
   ],
-  "ignorePatterns": ["node_modules"],
+  "ignorePatterns": [],
   "rules": {
     "import/order": [
       "error",

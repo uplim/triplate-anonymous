@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --dir src --dir tests",
+    "format": "eslint --fix . && prettier --write src tests",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "npm run bundle-design-token && storybook build"
   },
   "dependencies": {
     "next": "14.0.3",
@@ -15,6 +18,13 @@
   },
   "devDependencies": {
     "@cybozu/eslint-config": "^22.0.2",
+    "@storybook/addon-essentials": "^7.6.3",
+    "@storybook/addon-interactions": "^7.6.3",
+    "@storybook/addon-links": "^7.6.3",
+    "@storybook/blocks": "^7.6.3",
+    "@storybook/nextjs": "^7.6.3",
+    "@storybook/react": "^7.6.3",
+    "@storybook/testing-library": "^0.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -22,9 +32,14 @@
     "eslint-config-next": "14.0.3",
     "eslint-plugin-unicorn": "^49.0.0",
     "prettier": "^3.1.0",
+    "storybook": "^7.6.3",
+    "storybook-addon-pseudo-states": "^2.1.2",
     "typescript": "^5"
   },
   "engines": {
     "node": "20.10.0"
+  },
+  "resolutions": {
+    "eslint-plugin-react-hooks": "4.6.0"
   }
 }
