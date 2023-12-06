@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
-import '@/styles/global.css';
+import '@/styles/globals.css';
 
 const preview: Preview = {
   parameters: {
@@ -20,9 +20,9 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-      <>
+      <main>
         <Story />
-      </>
+      </main>
     ),
   ],
 };

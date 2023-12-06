@@ -10,7 +10,7 @@ const New = async () => {
   return (
     <>
       <Header title="新しい旅程の作成" />
-      
+
     </>
   );
 };
