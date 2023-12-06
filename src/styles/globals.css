@@ -1,6 +1,24 @@
 :root {
+  /* 文字色 */
   --color-black: #0f141a;
-  --color-white: #ffffff;
+
+  /* 背景色 */
+  --bg-white: #ffffff;
+
+  /* ボーダー色 */
+  --border-gray: #f2f2f2;
+
+  /* breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-md: 768px;
+
+  /* font size */
+  --font-xs: 1.2rem;
+  --font-sm: 1.4rem;
+  --font-md: 1.6rem;
+  --font-lg: 2.0rem;
+  --font-xl: 2.4rem;
+  --font-xxl: 3.2rem;
 }
 
 * {
@@ -11,7 +29,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   font-size: 62.5%;
   color: var(--color-black)
@@ -29,7 +47,15 @@ body {
     system-ui,
     sans-serif;
   line-height: 1.15;
-  background-color: var(--color-white);
+  background-color: var(--bg-white);
+}
+
+main {
+  position: relative;
+  min-width: var(--breakpoint-xs);
+  max-width: var(--breakpoint-md);
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 a {

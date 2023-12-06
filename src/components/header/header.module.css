@@ -1,0 +1,18 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  min-width: var(--breakpoint-xs);
+  max-width: var(--breakpoint-md);
+  height: 56px;
+  padding-bottom: 8px;
+  background-color: var(--bg-white);
+  border-bottom: 2px solid var(--border-gray);
+}
+
+.title {
+  font-size: var(--font-md);
+  line-height: 3.5;
+  text-align: center;
+}
