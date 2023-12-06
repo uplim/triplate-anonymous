@@ -14,4 +14,10 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "cSpell.enabled": true,
+  "cSpell.ignorePaths": [
+    "yarn.lock",
+    "node_modules",
+    ".git/objects",
+    ".vscode"
+  ]
 }
