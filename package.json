@@ -43,6 +43,7 @@
     "prettier": "^3.1.0",
     "storybook": "^7.6.3",
     "storybook-addon-pseudo-states": "^2.1.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5"
   },
   "engines": {

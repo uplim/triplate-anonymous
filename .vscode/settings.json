@@ -19,5 +19,7 @@
     "node_modules",
     ".git/objects",
     ".vscode"
-  ]
+  ],
+  "jest.jestCommandLine": "yarn test",
+  "jest.rootPath": "./"
 }

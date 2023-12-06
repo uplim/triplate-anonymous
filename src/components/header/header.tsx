@@ -4,7 +4,7 @@ type HeaderProps = {
   title?: string;
 };
 
-export const Header = async ({ title }: HeaderProps) => {
+export const Header = ({ title }: HeaderProps) => {
   return (
     <header className={style.header}>
       <div className={style.container}>
