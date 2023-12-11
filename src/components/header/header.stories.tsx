@@ -1,4 +1,5 @@
 import { Header } from './header';
+
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof Header> = {
@@ -7,7 +8,7 @@ const meta: Meta<typeof Header> = {
   argTypes: {
     title: {
       description: 'headerに表示される文字',
-    }
+    },
   },
   tags: ['autodocs'],
 };

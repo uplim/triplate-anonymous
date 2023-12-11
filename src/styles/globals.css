@@ -16,7 +16,7 @@
   --font-xs: 1.2rem;
   --font-sm: 1.4rem;
   --font-md: 1.6rem;
-  --font-lg: 2.0rem;
+  --font-lg: 2rem;
   --font-xl: 2.4rem;
   --font-xxl: 3.2rem;
 }
@@ -32,7 +32,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-size: 62.5%;
-  color: var(--color-black)
+  color: var(--color-black);
 }
 
 body {

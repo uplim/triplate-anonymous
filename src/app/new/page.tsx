@@ -7,12 +7,7 @@ export const metadata: Metadata = {
 };
 
 const New = async () => {
-  return (
-    <>
-      <Header title="新しい旅程の作成" />
-
-    </>
-  );
+  return <Header title="新しい旅程の作成" />;
 };
 
 export default New;
