@@ -7,7 +7,7 @@ type GlobalErrorProps = {
 
 const GlobalError = ({ reset }: GlobalErrorProps) => {
   return (
-    <html>
+    <html lang="ja">
       <body>
         <h2>Something went wrong!</h2>
         <button onClick={() => reset()}>Try again</button>
