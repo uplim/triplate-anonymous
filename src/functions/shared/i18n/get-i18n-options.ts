@@ -3,7 +3,7 @@ import { InitOptions } from 'i18next';
 import {
   DEFAULT_NS,
   LocaleType,
-  SUPPORTED_LOCALES,
+  AVAILABLE_LOCALES,
 } from '@/functions/shared/i18n';
 
 export const getI18nOptions = (
@@ -11,7 +11,7 @@ export const getI18nOptions = (
   ns = DEFAULT_NS
 ): InitOptions => {
   return {
-    supportedLngs: SUPPORTED_LOCALES,
+    supportedLngs: AVAILABLE_LOCALES,
     fallbackLng: language,
     lng: language,
     fallbackNS: DEFAULT_NS,

@@ -1,10 +1,12 @@
 {
-  "extends": ["next/core-web-vitals", "@cybozu/eslint-config/presets/react-typescript-prettier"],
-  "plugins": [
-    "unicorn"
+  "extends": [
+    "next/core-web-vitals",
+    "@cybozu/eslint-config/presets/react-typescript-prettier"
   ],
+  "plugins": ["unicorn"],
   "ignorePatterns": [],
   "rules": {
+    "unicorn/filename-case": "error",
     "import/order": [
       "error",
       {
@@ -25,12 +27,12 @@
             "position": "after"
           },
           {
-            "pattern": "~/images/**",
+            "pattern": "@/images/**",
             "group": "index",
             "position": "after"
           },
           {
-            "pattern": "~/types/**",
+            "pattern": "@/types/**",
             "group": "type",
             "position": "after"
           }

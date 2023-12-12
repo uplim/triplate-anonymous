@@ -6,7 +6,7 @@ import { initReactI18next } from 'react-i18next';
 
 import {
   LocaleType,
-  SUPPORTED_LOCALES,
+  AVAILABLE_LOCALES,
   getI18nOptions,
 } from '@/functions/shared/i18n';
 
@@ -33,7 +33,7 @@ export const initI18next = (() => {
           ...getI18nOptions(lng),
           lng,
           // レンダリングされる前に翻訳がロードされていることを保証する
-          preload: runsOnServerSide ? SUPPORTED_LOCALES : [],
+          preload: runsOnServerSide ? AVAILABLE_LOCALES : [],
         },
         () => {
           // 初期化後に実行される

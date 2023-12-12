@@ -1,5 +1,27 @@
 import '@testing-library/jest-dom';
+import i18next from 'i18next';
 import failOnConsole from 'jest-fail-on-console';
+import { initReactI18next } from 'react-i18next';
+
+import { getI18nOptions } from '@/functions/shared/i18n';
+import { locales } from '@/i18n/locales/ja';
+
+i18next.use(initReactI18next).init({
+  ...getI18nOptions('ja'),
+  resources: { ja: locales },
+});
+
+jest.mock('react', () => {
+  const testCache = <T extends (...args: unknown[]) => unknown>(func: T) =>
+    func;
+  const originalModule = jest.requireActual('react');
+  return {
+    ...originalModule,
+    cache: testCache,
+  };
+});
+
+jest.mock('next/headers', () => ({ headers: jest.fn(() => new Map()) }));
 
 failOnConsole({
   silenceMessage: (errorMessage) => {
