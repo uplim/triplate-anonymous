@@ -10,7 +10,7 @@ describe('getLocale', () => {
       get: (_header: string) => {
         return 'ja,en-US;q=0.9,en;q=0.8';
       },
-    } as unknown as ReadonlyHeaders);
+    } as ReadonlyHeaders);
 
     const locale = getLocale();
 
@@ -23,7 +23,7 @@ describe('getLocale', () => {
       get: (_header: string) => {
         return 'en-US;q=0.9,en;q=0.8';
       },
-    } as unknown as ReadonlyHeaders);
+    } as ReadonlyHeaders);
 
     // const locale = getLocale();
 
