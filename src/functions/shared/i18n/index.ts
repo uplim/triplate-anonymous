@@ -2,7 +2,7 @@ import { FlatNamespace } from 'i18next';
 
 export type LocaleType = 'ja';
 
-export const SUPPORTED_LOCALES: LocaleType[] = ['ja'];
+export const AVAILABLE_LOCALES: LocaleType[] = ['ja'];
 export const DEFAULT_LOCALE: LocaleType = 'ja';
 export const DEFAULT_NS: FlatNamespace = 'global';
 
