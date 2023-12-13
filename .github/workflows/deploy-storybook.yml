@@ -1,0 +1,42 @@
+# https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-react-and-next
+
+name: Deploy Storybook
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  deploy-storybook:
+    if: ${{ github.event.label.name == 'Storybook'}}
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20.10.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.10.0'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/yarn-nm-install
+        with:
+          cwd: '.'
+          enable-corepack: false
+          cache-node-modules: true
+          cache-install-state: true
+
+      - name: 'Build and Deploy'
+        run: |
+          yarn build:storybook
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/
