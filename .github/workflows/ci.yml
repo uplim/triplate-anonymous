@@ -4,8 +4,6 @@ name: ci
 
 on:
   push:
-    paths:
-      - front/**
 
 jobs:
   ci:
