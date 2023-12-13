@@ -8,6 +8,7 @@
     "localematcher",
     "nextjs",
     "nologin",
-    "triplate"
+    "triplate",
+    "unmock"
   ]
 }

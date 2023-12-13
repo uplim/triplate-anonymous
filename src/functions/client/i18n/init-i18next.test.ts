@@ -2,6 +2,8 @@ import i18next from 'i18next';
 
 import { initI18next } from './init-i18next';
 
+jest.unmock('./init-i18next');
+
 describe('initI18next', () => {
   test('i18nextの初期化処理が一度だけ呼ばれる', () => {
     const initMock = jest.spyOn(i18next, 'init');
