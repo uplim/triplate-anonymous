@@ -5,9 +5,6 @@ import { initI18next } from '@/functions/client/i18n/init-i18next';
 
 import { LocaleContext, LocaleProvider } from './locale-provider';
 
-// 初期化用モジュールをmock
-jest.mock('@/functions/client/i18n/init-i18next');
-
 describe('LocaleContext', () => {
   test('初期値が設定される', () => {
     const { result } = renderHook(() => useContext(LocaleContext));

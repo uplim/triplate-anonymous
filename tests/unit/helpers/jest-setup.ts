@@ -11,6 +11,15 @@ i18next.use(initReactI18next).init({
   resources: { ja: locales },
 });
 
+failOnConsole({
+  silenceMessage: (errorMessage) => {
+    if (/Invalid value for prop `action` on <form> tag./.test(errorMessage)) {
+      return true;
+    }
+    return false;
+  },
+});
+
 jest.mock('react', () => {
   const testCache = <T extends (...args: unknown[]) => unknown>(func: T) =>
     func;
@@ -23,11 +32,5 @@ jest.mock('react', () => {
 
 jest.mock('next/headers', () => ({ headers: jest.fn(() => new Map()) }));
 
-failOnConsole({
-  silenceMessage: (errorMessage) => {
-    if (/Invalid value for prop `action` on <form> tag./.test(errorMessage)) {
-      return true;
-    }
-    return false;
-  },
-});
+// functionsのモック。固有の機能は単体テストで担保
+jest.mock('@/functions/client/i18n/init-i18next');
