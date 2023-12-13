@@ -3,12 +3,12 @@
 name: Deploy Storybook
 
 on:
-  pull_request:
-    types: [labeled]
+  push:
+    branches:
+      - main
 
 jobs:
   deploy-storybook:
-    if: ${{ github.event.label.name == 'Storybook'}}
     runs-on: ubuntu-22.04
 
     steps:
