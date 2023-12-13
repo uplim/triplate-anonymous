@@ -1,0 +1,11 @@
+.label {
+  display: block;
+  font-size: var(--font-md);
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: var(--font-sm);
+  margin-left: 16px;
+  color: var(--color-gray);
+}
