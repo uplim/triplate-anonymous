@@ -1,14 +1,18 @@
 {
   "userWords": [
     "autodocs",
+    "corepack",
     "cybozu",
+    "hardlinks",
     "formatjs",
     "Kaku",
     "lngs",
     "localematcher",
     "nextjs",
     "nologin",
+    "prebuild",
     "triplate",
-    "unmock"
+    "unmock",
+    "yarnrc"
   ]
 }
