@@ -23,7 +23,7 @@ const withI18nProvider: Decorator = (Story) => {
 const preview: Preview = {
   parameters: {
     backgrounds: {
-      default: 'light',
+      default: 'white',
     },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
