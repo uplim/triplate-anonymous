@@ -1,14 +1,23 @@
+import { getLocale } from '@/functions/server/i18n/get-locale';
+import { getTranslation } from '@/functions/server/i18n/get-translation';
+
+import { LocaleProvider } from './_components/i18n/locale-provider';
+
 import type { Metadata } from 'next';
+
 import '@/styles/globals.css';
 
-export const metadata: Metadata = {
-  title: {
-    template: `%s | TRIPLATE - たびにいきたくなる旅程管理アプリ`,
-    default: 'TRIPLATE - たびにいきたくなる旅程管理アプリ',
-  },
-  description:
-    'TRIPLATEはたび先で確認したい旅程のURLを管理し、たびの思い出と一緒にテンプレートして公開することで新しいたびのアイデアが得られるWebアプリです！',
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getTranslation();
+
+  return {
+    title: {
+      template: `%s - ${t('common.triplate.title')}`,
+      default: t('common.triplate.title'),
+    },
+    description: t('common.triplate.description'),
+  };
+}
 
 export default function RootLayout({
   children,
@@ -18,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <main>{children}</main>
+        <LocaleProvider locale={getLocale()}>
+          <main>{children}</main>
+        </LocaleProvider>
       </body>
     </html>
   );
