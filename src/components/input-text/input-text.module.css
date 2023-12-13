@@ -1,0 +1,27 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 16px;
+  font-size: var(--font-md);
+  background-color: var(--bg-gray-1);
+  border: 0;
+  border-radius: 100px;
+  outline: none;
+}
+
+.input:hover,
+.input:focus {
+  outline: 2px solid var(--bg-gray-2);
+}
+
+/* invalid時 */
+.input[aria-invalid='true'],
+.input:hover[aria-invalid='true'],
+.input:focus[aria-invalid='true'] {
+  outline: 2px solid var(--outline-red);
+}
+
+/* disabled時 */
+.input[aria-disabled='true'] {
+  background-color: var(--bg-gray-2);
+}
