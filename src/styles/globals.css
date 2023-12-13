@@ -4,9 +4,14 @@
 
   /* 背景色 */
   --bg-white: #ffffff;
+  --bg-gray-1: #f2f2f2;
+  --bg-gray-2: #e1e1e1;
 
   /* ボーダー色 */
   --border-gray: #f2f2f2;
+
+  /* outline */
+  --outline-red: #cc1818;
 
   /* breakpoints */
   --breakpoint-xs: 320px;
@@ -19,6 +24,9 @@
   --font-lg: 2rem;
   --font-xl: 2.4rem;
   --font-xxl: 3.2rem;
+
+  /* z-index */
+  --z-index-header: 100;
 }
 
 * {

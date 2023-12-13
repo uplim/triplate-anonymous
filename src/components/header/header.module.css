@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: var(--z-index-header);
   width: 100%;
   min-width: var(--breakpoint-xs);
   max-width: var(--breakpoint-md);
