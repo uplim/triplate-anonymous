@@ -10,7 +10,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build": "next build",
-    "build:storybook": "storybook build"
+    "build:storybook": "storybook build -o build/storybook"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.2",
