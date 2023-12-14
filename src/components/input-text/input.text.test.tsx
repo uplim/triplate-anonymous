@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
 
 import { InputText } from './input-text';
@@ -39,5 +39,27 @@ describe('InputText', () => {
 
     // イベントハンドラが5回呼ばれている
     expect(handleChange).toHaveBeenCalledTimes(5);
+  });
+
+  test('disable時は入力ができないが、tabキーでのフォーカスは当たる', async () => {
+    const handleChange = jest.fn();
+
+    render(
+      <InputText defaultValue="" onChange={handleChange} aria-disabled="true" />
+    );
+
+    const input = screen.getByRole('textbox');
+
+    // tabキーを押す
+    await userEvent.tab();
+
+    // フォーカスが当たる
+    expect(input).toHaveFocus();
+
+    // inputとタイプ
+    await userEvent.type(input, 'input');
+
+    // イベントハンドラが呼ばれない
+    expect(handleChange).not.toHaveBeenCalled();
   });
 });

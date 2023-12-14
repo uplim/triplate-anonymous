@@ -26,7 +26,10 @@ export const InputText = ({
       placeholder={placeholder}
       value={defaultValue}
       type="text"
-      onChange={onChange}
+      onChange={(e) => {
+        if (ariaAttributes['aria-disabled']) return;
+        onChange(e);
+      }}
       {...ariaAttributes}
     />
   );

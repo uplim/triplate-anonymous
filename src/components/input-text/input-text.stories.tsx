@@ -32,7 +32,8 @@ const meta: Meta<typeof InputText> = {
       description: '不正な値が入力されたらtrueにする',
     },
     'aria-disabled': {
-      description: '無効で編集操作ができない状態の時、trueにする',
+      description:
+        '無効で編集操作ができない状態の時trueにする。無効だがtabでのフォーカスは当たるので、知覚できる',
     },
   },
   tags: ['autodocs'],
@@ -83,6 +84,7 @@ export const Disabled: Story = {
   render: InputText,
   args: {
     placeholder: 'ともだちと京都旅行',
+    defaultValue: '',
     'aria-disabled': 'true',
   },
 };
