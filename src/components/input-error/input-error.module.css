@@ -1,0 +1,24 @@
+.outer {
+  align-items: flex-start;
+  margin-top: 8px;
+  color: var(--color-red);
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.message {
+  margin-top: 1px;
+  font-size: var(--font-sm);
+  line-height: 20px;
+}
+
+.show {
+  display: flex;
+}
+
+.disable {
+  display: none;
+}
