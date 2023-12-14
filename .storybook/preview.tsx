@@ -32,6 +32,11 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    options: {
+      storySort: {
+        order: ['components', 'pages']
+      }
+    }
   },
   globalTypes: {
     pseudo: {},
