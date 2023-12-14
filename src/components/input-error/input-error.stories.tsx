@@ -25,6 +25,13 @@ export default meta;
 type Story = StoryObj<typeof InputError>;
 
 export const Default: Story = {
+  args: {
+    id: 'id',
+    message: '必須です',
+  },
+};
+
+export const WithInput: Story = {
   render: ({ id, message }) => (
     <EditField id={id} label="表示される名前">
       <InputText id={id} defaultValue="" onChange={() => 0} />

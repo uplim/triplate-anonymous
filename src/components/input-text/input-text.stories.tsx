@@ -43,45 +43,23 @@ export default meta;
 
 type Story = StoryObj<typeof InputText>;
 
-const DefaultTemplate = ({
-  defaultValue,
-  placeholder,
-  ...ariaAttributes
-}: InputTextProps) => {
-  const [value, setValue] = useState(defaultValue);
-
-  return (
-    <InputText
-      defaultValue={value}
-      placeholder={placeholder}
-      onChange={(e) => setValue(e.target.value)}
-      aria-disabled={ariaAttributes['aria-disabled']}
-      aria-invalid={ariaAttributes['aria-invalid']}
-    />
-  );
-};
-
 export const Default: Story = {
-  render: DefaultTemplate,
+  render: InputText,
   args: {
     placeholder: 'ともだちと京都旅行',
-    defaultValue: '',
     'aria-invalid': 'false',
     'aria-disabled': 'false',
   },
 };
 
 export const Invalid: Story = {
-  render: InputText,
   args: {
-    defaultValue:
-      'ロングロング文字ロングロング文字ロングロング文字ロングロング文字',
+    placeholder: 'ともだちと京都旅行',
     'aria-invalid': 'true',
   },
 };
 
 export const Disabled: Story = {
-  render: InputText,
   args: {
     placeholder: 'ともだちと京都旅行',
     defaultValue: '',

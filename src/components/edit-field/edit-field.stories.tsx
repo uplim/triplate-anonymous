@@ -26,6 +26,14 @@ export default meta;
 type Story = StoryObj<typeof EditField>;
 
 export const Default: Story = {
+  args: {
+    id: 'input-text',
+    label: '自己紹介',
+    description: '任意',
+  },
+};
+
+export const WithInput: Story = {
   render: (props) => (
     <EditField {...props}>
       <InputText id={props.id} defaultValue="" onChange={() => 0} />
