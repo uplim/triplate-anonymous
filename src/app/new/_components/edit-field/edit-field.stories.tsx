@@ -1,4 +1,4 @@
-import { InputText } from '../input-text/input-text';
+import { InputText } from '../../../../components/input-text/input-text';
 
 import { EditField } from './edit-field';
 

@@ -1,13 +1,13 @@
 import { HiOutlineExclamationCircle } from 'react-icons/hi';
 
-import style from './input-error.module.css';
+import style from './form-error.module.css';
 
-export type InputErrorProps = {
+export type FormErrorProps = {
   id: string;
   message?: string;
 };
 
-export const InputError = ({ id, message }: InputErrorProps) => {
+export const FormError = ({ id, message }: FormErrorProps) => {
   return (
     <div
       className={`${style.outer} ${message ? style.show : style.disable}`}

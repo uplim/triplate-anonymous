@@ -1,13 +1,13 @@
-import { EditField } from '../edit-field/edit-field';
+import { EditField } from '../../app/new/_components/edit-field/edit-field';
 import { InputText } from '../input-text/input-text';
 
-import { InputError } from './input-error';
+import { FormError } from './form-error';
 
 import type { StoryObj, Meta } from '@storybook/react';
 
-const meta: Meta<typeof InputError> = {
-  title: 'components/InputError',
-  component: InputError,
+const meta: Meta<typeof FormError> = {
+  title: 'components/FormError',
+  component: FormError,
   argTypes: {
     id: {
       description:
@@ -22,7 +22,7 @@ const meta: Meta<typeof InputError> = {
 
 export default meta;
 
-type Story = StoryObj<typeof InputError>;
+type Story = StoryObj<typeof FormError>;
 
 export const Default: Story = {
   args: {
@@ -35,7 +35,7 @@ export const WithInput: Story = {
   render: ({ id, message }) => (
     <EditField id={id} label="表示される名前">
       <InputText id={id} defaultValue="" onChange={() => 0} />
-      <InputError id={id} message={message} />
+      <FormError id={id} message={message} />
     </EditField>
   ),
   args: {
