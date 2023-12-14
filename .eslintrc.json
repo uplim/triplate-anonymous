@@ -4,7 +4,7 @@
     "@cybozu/eslint-config/presets/react-typescript-prettier"
   ],
   "plugins": ["unicorn"],
-  "ignorePatterns": [],
+  "ignorePatterns": ["node_modules/**/*", "build/**/*", ".next/**/*"],
   "rules": {
     "unicorn/filename-case": "error",
     "import/order": [

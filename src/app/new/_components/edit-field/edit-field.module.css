@@ -2,6 +2,7 @@
   display: block;
   font-size: var(--font-md);
   margin-bottom: 8px;
+  margin-top: 16px;
 }
 
 .description {
