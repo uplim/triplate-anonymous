@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-import { InputText, InputTextProps } from './input-text';
+import { InputText } from './input-text';
 
 import type { StoryObj, Meta } from '@storybook/react';
 

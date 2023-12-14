@@ -15,3 +15,5 @@ const GlobalError = ({ reset }: GlobalErrorProps) => {
     </html>
   );
 };
+
+export default GlobalError;
