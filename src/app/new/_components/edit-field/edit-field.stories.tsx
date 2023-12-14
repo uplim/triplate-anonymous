@@ -5,7 +5,7 @@ import { EditField } from './edit-field';
 import type { StoryObj, Meta } from '@storybook/react';
 
 const meta: Meta<typeof EditField> = {
-  title: 'components/EditField',
+  title: 'pages/new/EditField',
   component: EditField,
   argTypes: {
     id: {
