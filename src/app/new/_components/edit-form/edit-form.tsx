@@ -15,17 +15,18 @@ export const EditForm = () => {
   const { t } = useTranslation('page');
 
   const store = usePageStore();
+  const { name, password } = store;
 
   const { handleChangeName, handleChangePassword, handleSaveTriplink } =
     useEditFormHandler(store);
 
   return (
-    <form className={style.form}>
+    <form className={style.form} onSubmit={handleSaveTriplink}>
       <div className={style['form-field']}>
         <EditField id="name" label={t('page.new.edit-form.name')}>
           <InputText
             id="name"
-            defaultValue=""
+            defaultValue={name}
             placeholder={t('page.new.edit-form.name.placeholder')}
             onChange={handleChangeName}
           />
@@ -33,7 +34,7 @@ export const EditForm = () => {
         <EditField id="password" label={t('page.new.edit-form.password')}>
           <InputText
             id="password"
-            defaultValue=""
+            defaultValue={password}
             placeholder={t('page.new.edit-form.password.placeholder')}
             onChange={handleChangePassword}
           />
