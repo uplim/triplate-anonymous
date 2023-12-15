@@ -4566,7 +4566,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16, @types/react@npm:^18":
+"@types/react@npm:*, @types/react@npm:>=16":
   version: 18.2.43
   resolution: "@types/react@npm:18.2.43"
   dependencies:
@@ -4574,6 +4574,17 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10477a50fbd3c0cc5b8a2ade679f442717f68fb27c8460b2aa1d3256cd18c48f742bbe5b9ee37a8c4c5f832ffa37b3a23c09fd96dd880a8e3182d8929c05e803
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.2.45":
+  version: 18.2.45
+  resolution: "@types/react@npm:18.2.45"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 4cc650c47ffb88baac29fb7a74e842e4af4a55f437086ef70250fdc75f0a5f2fcf8adc272d05ab2e00b1de6e14613296881271caee037dadf9130fdeb498c59e
   languageName: node
   linkType: hard
 
@@ -9198,12 +9209,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^23.7.8":
-  version: 23.7.8
-  resolution: "i18next@npm:23.7.8"
+"i18next@npm:23.7.11":
+  version: 23.7.11
+  resolution: "i18next@npm:23.7.11"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 1f6c472d167f02c1f3274ed16649fba03405a561e27f34721e93a3dd4aa585e12a6a7d9c9910282f113b058127ae130b824ba505e020c205e04405035ed31f2e
+  checksum: 66f166bebbde565d4e0ed98b0f046f49d97c591fa8e4919bd9badfb6be3b1057ec137b9332beb4835b2d6714af243726dc3996d60f54949cfd23c839b0f8a3b6
   languageName: node
   linkType: hard
 
@@ -14455,13 +14466,13 @@ __metadata:
     "@types/jsdom": "npm:^21.1.6"
     "@types/negotiator": "npm:^0"
     "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
+    "@types/react": "npm:18.2.45"
     "@types/react-dom": "npm:^18"
     client-only: "npm:^0.0.1"
     eslint: "npm:^8"
     eslint-config-next: "npm:14.0.4"
     eslint-plugin-unicorn: "npm:^49.0.0"
-    i18next: "npm:^23.7.8"
+    i18next: "npm:23.7.11"
     i18next-resources-to-backend: "npm:^1.2.0"
     immer: "npm:^10.0.3"
     jest: "npm:^29.7.0"
