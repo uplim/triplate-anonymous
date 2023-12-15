@@ -30,8 +30,12 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   render: (props) => (
     <div>
+      <h2>Contained</h2>
       <Button {...props} variant="contained" size="md">
-        variant contained
+        size md
+      </Button>
+      <Button {...props} aria-disabled="true" variant="contained" size="md">
+        disabled
       </Button>
     </div>
   ),

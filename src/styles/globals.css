@@ -91,9 +91,10 @@ select {
   border: 0;
   outline: 0;
   box-shadow: none;
-  &:disabled {
-    cursor: default;
-  }
+}
+
+select[aria-disabled='true'] {
+  cursor: default;
 }
 
 button {
@@ -102,9 +103,10 @@ button {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  &:disabled {
-    cursor: default;
-  }
+}
+
+button[aria-disabled='true'] {
+  cursor: default;
 }
 
 label {

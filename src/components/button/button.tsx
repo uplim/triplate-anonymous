@@ -12,15 +12,19 @@ export type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: 'contained';
   size?: 'md';
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
   children?: string;
 } & Pick<AriaAttributes, 'aria-disabled'>;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant, size, children, onClick, formAction, ...rest }, ref) => {
+  (
+    { variant, size, children, className, onClick, formAction, ...rest },
+    ref
+  ) => {
     return (
       <button
         ref={ref}
-        className={`${style.base} ${
+        className={`${className} ${style.base} ${
           variant ? style['variant-' + variant] : ''
         } ${size ? style['size-' + size] : ''}`}
         onClick={(e) => {
