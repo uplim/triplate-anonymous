@@ -5,6 +5,7 @@
     "cybozu",
     "hardlinks",
     "formatjs",
+    "immer",
     "Kaku",
     "lngs",
     "localematcher",
@@ -13,7 +14,9 @@
     "prebuild",
     "testid",
     "triplate",
+    "triplink",
     "unmock",
-    "yarnrc"
+    "yarnrc",
+    "zustand"
   ]
 }
