@@ -1,0 +1,41 @@
+import { Button } from './button';
+
+import type { StoryObj, Meta } from '@storybook/react';
+
+const meta: Meta<typeof Button> = {
+  title: 'components/Button',
+  component: Button,
+  argTypes: {
+    variant: {
+      description: '見た目の種類',
+    },
+    size: {
+      description: '大きさ',
+    },
+    children: {
+      description: 'ボタンに表示されるテキスト',
+    },
+    'aria-disabled': {
+      description:
+        '無効で編集操作ができない状態の時trueにする。無効だがtabでのフォーカスは当たるので、知覚できる',
+    },
+  },
+  tags: ['autodocs'],
+};
+
+export default meta;
+
+type Story = StoryObj<typeof Button>;
+
+export const Default: Story = {
+  render: (props) => (
+    <div>
+      <Button {...props} variant="contained" size="md">
+        variant contained
+      </Button>
+    </div>
+  ),
+  args: {
+    'aria-disabled': 'false',
+  },
+};

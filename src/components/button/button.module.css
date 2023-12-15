@@ -1,0 +1,26 @@
+.base {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+  font-size: var(--font-md);
+  font-weight: 600;
+}
+
+.variant-contained {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  border-radius: 100px;
+  gap: 10px;
+  width: 100%;
+}
+
+.variant-contained:hover,
+.variant-contained:focus {
+  background-color: var(--hover-black);
+}
+
+.variant-contained.size-md {
+  height: 56px;
+}

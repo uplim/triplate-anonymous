@@ -3,10 +3,13 @@ import { render, screen } from '@testing-library/react';
 import { FormError } from './form-error';
 
 describe('FormError', () => {
-  test('指定したエラーメッセージが表示される', () => {
+  test('propsに応じて表示される', () => {
     render(<FormError id="errorId" message="error message" />);
 
-    expect(screen.getByRole('alert')).toHaveTextContent('error message');
+    const error = screen.getByRole('alert');
+
+    expect(error).toHaveTextContent('error message');
+    expect(error).toHaveAttribute('id', 'errorId');
   });
 
   test('エラーメッセージを指定しない場合は表示されない', () => {
