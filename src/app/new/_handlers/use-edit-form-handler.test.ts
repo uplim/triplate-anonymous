@@ -2,7 +2,7 @@ import { jest } from '@jest/globals';
 import { act, renderHook } from '@testing-library/react';
 import { ChangeEvent } from 'react';
 
-import { useEditFormHandler } from './use-edit-form-handler';
+import { useEditFormHandler } from '../handlers./../_handlers/use-edit-form-handler';
 
 describe('useEditFormHandler', () => {
   const setName = jest.fn();

@@ -1,7 +1,7 @@
 import { renderHook } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
 
-import { usePageStore } from './use-page-store';
+import { usePageStore } from '../store/../_store/use-page-store';
 
 describe('usePageStore', () => {
   test('storeの初期値が指定した値である', () => {

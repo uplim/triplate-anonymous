@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 import { InputText } from '@/components/input-text/input-text';
 
-import { useEditFormHandler } from '../../_hooks/handlers/use-edit-form-handler';
-import { usePageStore } from '../../_hooks/store/use-page-store';
+import { useEditFormHandler } from '../../_handlers/use-edit-form-handler';
+import { usePageStore } from '../../_store/use-page-store';
 import { EditField } from '../edit-field/edit-field';
 
 import style from './edit-form.module.css';

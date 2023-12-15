@@ -1,6 +1,6 @@
 import { ChangeEventHandler, useCallback } from 'react';
 
-import { Actions, State } from '../store/use-page-store';
+import { Actions, State } from '../_store/use-page-store';
 
 export type HandlerArgsType = State & Actions;
 
