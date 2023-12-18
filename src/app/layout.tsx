@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { getLocale } from '@/functions/server/i18n/get-locale';
 import { getTranslation } from '@/functions/server/i18n/get-translation';
 
@@ -19,10 +21,10 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="ja">
