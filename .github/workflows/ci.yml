@@ -21,7 +21,7 @@ jobs:
         uses: ./.github/actions/yarn-nm-install
         with:
           cwd: '.'
-          enable-corepack: false
+          enable-corepack: true
           cache-node-modules: true
           cache-install-state: true
 
