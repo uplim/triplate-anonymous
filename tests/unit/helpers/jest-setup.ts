@@ -34,3 +34,4 @@ jest.mock('next/headers', () => ({ headers: jest.fn(() => new Map()) }));
 
 // functionsのモック。固有の機能は単体テストで担保
 jest.mock('@/functions/client/i18n/init-i18next');
+jest.mock('@/functions/server/firebase/get-firebase');
