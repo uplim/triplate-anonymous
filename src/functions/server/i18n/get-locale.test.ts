@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import { ReadonlyHeaders } from 'next/dist/server/web/spec-extension/adapters/headers';
 import * as headers from 'next/headers';
 

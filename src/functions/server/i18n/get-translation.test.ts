@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import { getLocale } from './get-locale';
 import { getTranslation } from './get-translation';
 

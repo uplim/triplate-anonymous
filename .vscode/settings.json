@@ -21,5 +21,6 @@
     ".vscode"
   ],
   "jest.jestCommandLine": "yarn test",
-  "jest.rootPath": "./"
+  "jest.rootPath": "./",
+  "jest.autoRun": { "watch": true }
 }

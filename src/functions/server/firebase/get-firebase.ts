@@ -1,34 +1,30 @@
 import 'server-only';
 
-import { initializeApp, cert } from 'firebase-admin/app';
+import { initializeApp, cert, ServiceAccount } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { cache } from 'react';
 
 const initFirebaseAdmin = () => {
-  const encodedServiceAccountKey = Buffer.from(
-    process.env.SERVICE_ACCOUNT_KEY || '',
-    'base64'
-  ).toString('utf8');
-  const serviceAccountKey = JSON.parse(encodedServiceAccountKey);
-
-  const serviceAccount = {
-    projectId: serviceAccountKey.project_id,
-    clientEmail: serviceAccountKey.client_email,
-    privateKey: serviceAccountKey.private_key.replace(/\\n/g, '\n'),
+  const serviceAccount: ServiceAccount = {
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_ADMIN_PRIVATE_KEY,
   };
 
-  initializeApp({
+  const app = initializeApp({
     credential: cert(serviceAccount),
-    storageBucket: `${serviceAccountKey.project_id}.appspot.com`,
+    storageBucket: `${process.env.FIREBASE_PROJECT_ID}.appspot.com`,
   });
+
+  return app;
 };
 
 export const getFirebaseAdmin = cache(() => {
-  initFirebaseAdmin();
+  const app = initFirebaseAdmin();
 
   return {
-    firestore: getFirestore(),
-    storage: getStorage(),
+    db: getFirestore(app),
+    storage: getStorage(app),
   };
 });
