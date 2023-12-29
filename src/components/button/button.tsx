@@ -1,6 +1,5 @@
 import {
   AriaAttributes,
-  ButtonHTMLAttributes,
   ComponentPropsWithRef,
   MouseEventHandler,
   forwardRef,
