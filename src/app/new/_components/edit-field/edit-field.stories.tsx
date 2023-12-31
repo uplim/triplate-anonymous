@@ -36,7 +36,7 @@ export const Default: Story = {
 export const WithInput: Story = {
   render: (props) => (
     <EditField {...props}>
-      <InputText id={props.id} defaultValue="" onChange={() => 0} />
+      <InputText id={props.id} defaultValue="" />
     </EditField>
   ),
   args: {

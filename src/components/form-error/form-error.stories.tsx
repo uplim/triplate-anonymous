@@ -34,7 +34,7 @@ export const Default: Story = {
 export const WithInput: Story = {
   render: ({ id, message }) => (
     <EditField id={id} label="表示される名前">
-      <InputText id={id} defaultValue="" onChange={() => 0} />
+      <InputText id={id} defaultValue="" />
       <FormError id={id} message={message} />
     </EditField>
   ),
