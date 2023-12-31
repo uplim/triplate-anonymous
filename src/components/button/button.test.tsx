@@ -22,6 +22,15 @@ describe('Button', () => {
       'base variant-contained size-md'
     );
   });
+  test('クリック時にonClickが呼び出される', async () => {
+    const handleClick = jest.fn();
+
+    render(<Button onClick={handleClick} />);
+
+    await userEvent.click(screen.getByRole('button'));
+
+    expect(handleClick).toHaveBeenCalled();
+  });
   test('disable時、ボタンを押せないがtabキーでのフォーカスは当たる', async () => {
     const handleClick = jest.fn();
 
@@ -35,7 +44,7 @@ describe('Button', () => {
     // フォーカスが当たる
     expect(button).toHaveFocus();
 
-    // inputとタイプ
+    // ボタンをクリックする
     await userEvent.click(button);
 
     // イベントハンドラが呼ばれない

@@ -12,6 +12,7 @@
 .base[aria-disabled='true'],
 .base[aria-disabled='true']:hover,
 .base[aria-disabled='true']:focus {
+  color: var(--color-gray);
   background-color: var(--bg-gray-2);
 }
 

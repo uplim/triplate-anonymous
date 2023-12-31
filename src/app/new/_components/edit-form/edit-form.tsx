@@ -1,12 +1,13 @@
 'use client';
 
+import { redirect } from 'next/navigation';
+import { useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/components/button/button';
 import { InputText } from '@/components/input-text/input-text';
 
-import { useEditFormHandler } from '../../_handlers/use-edit-form-handler';
-import { usePageStore } from '../../_store/use-page-store';
+import { createTriplink } from '../../_actions/actions';
 import { EditField } from '../edit-field/edit-field';
 
 import style from './edit-form.module.css';
@@ -14,33 +15,36 @@ import style from './edit-form.module.css';
 export const EditForm = () => {
   const { t } = useTranslation('page');
 
-  const store = usePageStore();
-  const { name, password } = store;
-
-  const { handleChangeName, handleChangePassword, handleSaveTriplink } =
-    useEditFormHandler(store);
+  const [isPending, startTransition] = useTransition();
 
   return (
-    <form className={style.form} onSubmit={handleSaveTriplink}>
+    <form
+      action={(formData) =>
+        startTransition(async () => {
+          await createTriplink(formData);
+        })
+      }
+      className={style.form}
+    >
       <div className={style['form-field']}>
         <EditField id="name" label={t('page.new.edit-form.name')}>
           <InputText
             id="name"
-            defaultValue={name}
+            name="name"
+            defaultValue=""
             placeholder={t('page.new.edit-form.name.placeholder')}
-            onChange={handleChangeName}
           />
         </EditField>
         <EditField id="password" label={t('page.new.edit-form.password')}>
           <InputText
             id="password"
-            defaultValue={password}
+            name="password"
+            defaultValue=""
             placeholder={t('page.new.edit-form.password.placeholder')}
-            onChange={handleChangePassword}
           />
         </EditField>
       </div>
-      <Button variant="contained" size="md">
+      <Button variant="contained" size="md" aria-disabled={isPending}>
         {t('page.new.button')}
       </Button>
     </form>

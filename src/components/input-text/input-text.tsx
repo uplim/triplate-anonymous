@@ -4,9 +4,9 @@ import style from './input-text.module.css';
 
 export type InputTextProps = {
   id?: string;
+  name?: string;
   placeholder?: string;
   defaultValue: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
 } & Pick<
   AriaAttributes,
   'aria-labelledby' | 'aria-invalid' | 'aria-describedby' | 'aria-disabled'
@@ -14,22 +14,19 @@ export type InputTextProps = {
 
 export const InputText = ({
   id,
+  name,
   defaultValue,
   placeholder,
-  onChange,
   ...ariaAttributes
 }: InputTextProps) => {
   return (
     <input
       id={id}
+      name={name}
       className={style.input}
       placeholder={placeholder}
-      value={defaultValue}
+      defaultValue={defaultValue}
       type="text"
-      onChange={(e) => {
-        if (ariaAttributes['aria-disabled']) return;
-        onChange(e);
-      }}
       {...ariaAttributes}
     />
   );

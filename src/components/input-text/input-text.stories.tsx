@@ -9,14 +9,14 @@ const meta: Meta<typeof InputText> = {
     id: {
       description: '一意なid。labelと同じ値を指定する',
     },
+    name: {
+      description: 'FormDataで入力情報を受け取る時に指定する',
+    },
     placeholder: {
       description: '初期値が空の時に表示されているテキスト',
     },
     defaultValue: {
       description: '初期値',
-    },
-    onChange: {
-      description: '入力時に呼ばれるイベントハンドラ',
     },
     'aria-labelledby': {
       description:
