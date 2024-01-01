@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 import { useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { executeServerActions } from '@/actions/execute-server-actions';
 import { Button } from '@/components/button/button';
 import { InputText } from '@/components/input-text/input-text';
 
@@ -21,7 +22,11 @@ export const EditForm = () => {
     <form
       action={(formData) =>
         startTransition(async () => {
-          await createTriplink(formData);
+          try {
+            await executeServerActions(() => createTriplink(formData));
+          } catch (error) {
+            console.error(error);
+          }
         })
       }
       className={style.form}
