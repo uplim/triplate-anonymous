@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "yarn@4.0.2",
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env FIRESTORE_EMULATOR_HOST=localhost:8080 FIREBASE_STORAGE_EMULATOR_HOST=localhost:9199 next dev",
     "start": "next start",
     "lint": "next lint --dir src --dir tests",
     "format": "eslint --fix . && prettier --write src tests",
@@ -50,6 +50,7 @@
     "@types/node": "20.10.6",
     "@types/react": "18.2.46",
     "@types/react-dom": "18.2.18",
+    "cross-env": "7.0.3",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-plugin-unicorn": "50.0.1",
