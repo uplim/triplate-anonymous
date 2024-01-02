@@ -1,3 +1,5 @@
+import { ServerActionsErrorResponse } from './errors';
+
 /**
  * Server Actionsの関数の型
  * 移行コスト削減のためRTK Queryに型定義寄せる
@@ -5,6 +7,13 @@
 export type ServerAction<ResultType = unknown, QueryArg = FormData> = (
   args: QueryArg
 ) => Promise<Result<ResultType>>;
+
+/**
+ * フォームバリデーションする関数
+ */
+export type Validator<QueryArg = FormData> = (
+  args: QueryArg
+) => ServerActionsErrorResponse | null;
 
 /**
  * Result型
@@ -19,5 +28,5 @@ type Success<T> = {
 
 type Failure = {
   isSuccess: false;
-  error?: Error;
+  error?: ServerActionsErrorResponse;
 };
