@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "yarn@4.0.2",
   "scripts": {
-    "dev": "cross-env FIRESTORE_EMULATOR_HOST=localhost:8080 FIREBASE_STORAGE_EMULATOR_HOST=localhost:9199 next dev",
+    "dev": "scripts/start-firebase-emulator.sh && cross-env FIRESTORE_EMULATOR_HOST=localhost:8080 FIREBASE_STORAGE_EMULATOR_HOST=localhost:9199 next dev && ./scripts/stop-firebase-emulator.sh",
     "start": "next start",
     "lint": "next lint --dir src --dir tests",
     "format": "eslint --fix . && prettier --write src tests",
