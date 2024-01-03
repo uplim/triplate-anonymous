@@ -4,19 +4,20 @@ import { Result, ServerAction, Validator } from './types';
 
 // https://github.com/vercel/next.js/discussions/51139#discussioncomment-6149945
 
-type WithValidate<ResultType = unknown, QueryArg = FormData> = (
-  action: ServerAction<ResultType, QueryArg>,
-  validator: Validator<QueryArg>
-) => ServerAction<ResultType, QueryArg>;
+export const withValidate = <InferredData, QueryArg, ResultType = unknown>(
+  validator: Validator<InferredData, QueryArg>,
+  action: ServerAction<InferredData, ResultType>
+) => {
+  return async (args: QueryArg): Promise<Result<ResultType>> => {
+    const result = validator(args);
 
-export const withValidate: WithValidate = (action, validator) => {
-  return async (args) => {
-    const error = validator(args);
-
-    if (error) {
-      return { isSuccess: false, error };
+    if (!result.isParsed) {
+      return {
+        isSuccess: false,
+        error: result.error,
+      };
     }
 
-    return action(args);
+    return action(result.data);
   };
 };

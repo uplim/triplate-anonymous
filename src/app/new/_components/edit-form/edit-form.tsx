@@ -8,8 +8,9 @@ import { executeServerActions } from '@/actions/execute-server-actions';
 import { Button } from '@/components/button/button';
 import { InputText } from '@/components/input-text/input-text';
 
-import { createTriplink } from '../../_actions/actions';
 import { EditField } from '../edit-field/edit-field';
+
+import { createTriplink } from './_actions/actions';
 
 import style from './edit-form.module.css';
 

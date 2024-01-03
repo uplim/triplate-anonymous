@@ -2,18 +2,23 @@ import { ServerActionsErrorResponse } from './errors';
 
 /**
  * Server Actionsの関数の型
- * 移行コスト削減のためRTK Queryに型定義寄せる
  */
-export type ServerAction<ResultType = unknown, QueryArg = FormData> = (
+export type ServerAction<QueryArg = unknown, ResultType = unknown> = (
   args: QueryArg
 ) => Promise<Result<ResultType>>;
 
 /**
  * フォームバリデーションする関数
  */
-export type Validator<QueryArg = FormData> = (
-  args: QueryArg
-) => ServerActionsErrorResponse | null;
+export type Validator<InferredData, QueryArg> = (formData: QueryArg) =>
+  | {
+      isParsed: true;
+      data: InferredData;
+    }
+  | {
+      isParsed: false;
+      error?: ServerActionsErrorResponse;
+    };
 
 /**
  * Result型
