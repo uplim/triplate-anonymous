@@ -9724,12 +9724,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:23.7.15":
-  version: 23.7.15
-  resolution: "i18next@npm:23.7.15"
+"i18next@npm:23.7.16":
+  version: 23.7.16
+  resolution: "i18next@npm:23.7.16"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 4709898ab003aa628d99bcd1e277f2d8a448aca714d2279202e35799878ce223f5e06d4245e692e1fd94a23eff6f758c7ffdb6f1519e9f5ed20ed64c273482cf
+  checksum: 8e18d56970a468e0c3f38cf105d2eb22c2b275b596ecd3ac7193fe6e73a57705f3415b510ea761b702163278b975bcab6c15187f254d350fb0501baf66927168
   languageName: node
   linkType: hard
 
@@ -15270,7 +15270,7 @@ __metadata:
     eslint-config-next: "npm:14.0.4"
     eslint-plugin-unicorn: "npm:50.0.1"
     firebase-admin: "npm:12.0.0"
-    i18next: "npm:23.7.15"
+    i18next: "npm:23.7.16"
     i18next-resources-to-backend: "npm:1.2.0"
     immer: "npm:10.0.3"
     jest: "npm:29.7.0"
