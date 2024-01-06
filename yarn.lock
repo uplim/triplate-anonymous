@@ -10812,13 +10812,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-to-equal-type@npm:0.1.0":
-  version: 0.1.0
-  resolution: "jest-to-equal-type@npm:0.1.0"
-  checksum: 7d3750fecf05c5b39e9528070ff9bb029f3db78156597a8a986cead0fb7d4b53ebc764b702be7dd10a3e8f691899ac2216fdbb67b5d13cf973cca6e1d88e8517
-  languageName: node
-  linkType: hard
-
 "jest-util@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-util@npm:29.7.0"
@@ -15276,7 +15269,6 @@ __metadata:
     jest: "npm:29.7.0"
     jest-environment-jsdom: "npm:29.7.0"
     jest-fail-on-console: "npm:3.1.2"
-    jest-to-equal-type: "npm:0.1.0"
     negotiator: "npm:0.6.3"
     next: "npm:14.0.4"
     prettier: "npm:3.1.1"

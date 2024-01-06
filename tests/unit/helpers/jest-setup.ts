@@ -6,8 +6,6 @@ import { initReactI18next } from 'react-i18next';
 import { getI18nOptions } from '@/functions/shared/i18n';
 import { locales } from '@/i18n/locales/ja';
 
-import 'jest-to-equal-type';
-
 i18next.use(initReactI18next).init({
   ...getI18nOptions('ja'),
   resources: { ja: locales },
