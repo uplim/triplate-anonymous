@@ -2,7 +2,7 @@ import 'server-only';
 
 import { randomUUID } from 'crypto';
 
-import { getFirebaseAdmin } from '@/functions/server/firebase/get-firebase';
+import { getFirebaseAdmin } from '@/repositories/get-firebase';
 
 import { converter } from './converter';
 import { TriplinksPost } from './types';
