@@ -23,11 +23,11 @@ export const EditForm = () => {
     <form
       action={(formData) =>
         startTransition(async () => {
-          try {
-            await executeServerActions(() => createTriplink(formData));
-          } catch (error) {
-            console.error(error);
-          }
+          const { data } = await executeServerActions(() =>
+            createTriplink(formData)
+          );
+
+          redirect(`/triplinks/${data}`);
         })
       }
       className={style.form}

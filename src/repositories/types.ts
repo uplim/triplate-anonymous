@@ -9,9 +9,8 @@ import { DocumentData, QueryDocumentSnapshot } from 'firebase-admin/firestore';
  */
 export type Converter<
   Document extends DocumentData,
-  Retrieve extends DocumentData,
-  Post extends DocumentData,
+  Entity extends DocumentData,
 > = {
-  toFirestore: (data: Post) => Document;
-  fromFirestore: (snapshot: QueryDocumentSnapshot<Document>) => Retrieve;
+  toFirestore: (data: Entity) => Document;
+  fromFirestore: (snapshot: QueryDocumentSnapshot<Document>) => Entity;
 };

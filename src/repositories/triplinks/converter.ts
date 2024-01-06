@@ -4,14 +4,11 @@ import { Timestamp } from 'firebase-admin/firestore';
 
 import { Converter } from '@/repositories/types';
 
-import { TriplinksDocument, TriplinksRetrieve, TriplinksPost } from './types';
+import { TriplinksType, TriplinksDocumentType } from './types';
 
-export const converter: Converter<
-  TriplinksDocument,
-  TriplinksRetrieve,
-  TriplinksPost
-> = {
+export const converter: Converter<TriplinksDocumentType, TriplinksType> = {
   toFirestore: (data) => ({
+    id: data.id,
     name: data.name,
     password: data.password,
     createdAt: Timestamp.fromDate(data.createdAt),
@@ -21,7 +18,7 @@ export const converter: Converter<
     const data = snapshot.data();
 
     return {
-      id: snapshot.id,
+      id: data.id,
       name: data.name,
       password: data.password,
       createdAt: data.createdAt.toDate(),

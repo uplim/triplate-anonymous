@@ -7,6 +7,7 @@ describe('converter', () => {
     const date = '2024-01-06T10:03:40.573Z';
 
     const data = {
+      id: 'id',
       name: 'たびの名前',
       password: 'password',
       createdAt: new Date(date),
@@ -15,6 +16,7 @@ describe('converter', () => {
 
     // createdAtとupdatedAtをTimestamp型に変換する
     expect(converter.toFirestore(data)).toStrictEqual({
+      id: data.id,
       name: data.name,
       password: data.password,
       createdAt: Timestamp.fromDate(data.createdAt),
@@ -33,6 +35,7 @@ describe('converter', () => {
     const docId = '54df372a-6a45-420e-a117-fa6e41f106f5';
 
     const data = {
+      id: 'id',
       name: 'たびの名前',
       password: 'password',
       createdAt: Timestamp.fromDate(new Date(date)),
@@ -43,10 +46,9 @@ describe('converter', () => {
     expect(
       converter.fromFirestore({
         data: () => data,
-        id: docId,
       } as any)
     ).toStrictEqual({
-      id: docId,
+      id: data.id,
       name: data.name,
       password: data.password,
       createdAt: new Date(date),
