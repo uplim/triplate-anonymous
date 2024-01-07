@@ -15,7 +15,7 @@ import { createTriplink } from './_actions/actions';
 import style from './edit-form.module.css';
 
 export const EditForm = () => {
-  const { t } = useTranslation('page');
+  const { t } = useTranslation('new');
 
   const [isPending, startTransition] = useTransition();
 
@@ -33,25 +33,25 @@ export const EditForm = () => {
       className={style.form}
     >
       <div className={style['form-field']}>
-        <EditField id="name" label={t('page.new.edit-form.name')}>
+        <EditField id="name" label={t('new.edit-form.name')}>
           <InputText
             id="name"
             name="name"
             defaultValue=""
-            placeholder={t('page.new.edit-form.name.placeholder')}
+            placeholder={t('new.edit-form.name.placeholder')}
           />
         </EditField>
-        <EditField id="password" label={t('page.new.edit-form.password')}>
+        <EditField id="password" label={t('new.edit-form.password')}>
           <InputText
             id="password"
             name="password"
             defaultValue=""
-            placeholder={t('page.new.edit-form.password.placeholder')}
+            placeholder={t('new.edit-form.password.placeholder')}
           />
         </EditField>
       </div>
       <Button variant="contained" size="md" aria-disabled={isPending}>
-        {t('page.new.button')}
+        {t('new.button')}
       </Button>
     </form>
   );

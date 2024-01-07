@@ -5,10 +5,10 @@ import { getTranslation } from '@/functions/server/i18n/get-translation';
 import * as triplinksAPI from '@/repositories/triplinks/repository';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getTranslation('page');
+  const { t } = await getTranslation('new');
 
   return {
-    title: t('page.new.header.title'),
+    title: t('new.header.title'),
   };
 }
 
@@ -17,14 +17,14 @@ type TriplinkProps = {
 };
 
 const Triplink = async ({ params }: TriplinkProps) => {
-  const { t } = await getTranslation('page');
+  const { t } = await getTranslation('new');
 
   // TODO: エラーハンドリング
   const triplink = await triplinksAPI.findById(String(params.id));
 
   return (
     <div>
-      <Header title={t('page.new.header.title')} />
+      <Header title={t('new.header.title')} />
       <p>{triplink?.id}</p>
       <p>{triplink?.name}</p>
       <p>{triplink?.password}</p>

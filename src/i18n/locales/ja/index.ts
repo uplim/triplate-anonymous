@@ -1,4 +1,4 @@
 import global from './global.json';
-import page from './page.json';
+import create from './new.json';
 
-export const locales = { global, page };
+export const locales = { global, new: create };

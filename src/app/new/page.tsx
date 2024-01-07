@@ -6,19 +6,19 @@ import { getTranslation } from '@/functions/server/i18n/get-translation';
 import { EditForm } from './_components/edit-form/edit-form';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getTranslation('page');
+  const { t } = await getTranslation('new');
 
   return {
-    title: t('page.new.header.title'),
+    title: t('new.header.title'),
   };
 }
 
 const New = async () => {
-  const { t } = await getTranslation('page');
+  const { t } = await getTranslation('new');
 
   return (
     <div>
-      <Header title={t('page.new.header.title')} />
+      <Header title={t('new.header.title')} />
       <EditForm />
     </div>
   );
