@@ -22,13 +22,13 @@ describe('getI18nOptions', () => {
 
   test('namespaceを指定すると、nsの値が変更される', () => {
     // nsをpageに指定
-    const options = getI18nOptions('ja', 'page');
+    const options = getI18nOptions('ja', 'new');
 
     // 取得されるオプション数は6
     expect(Object.keys(options)).toHaveLength(6);
 
     // nsがpageになっている
-    expect(options.ns).toBe('page');
+    expect(options.ns).toBe('new');
 
     // defaultのnamespaceはglobalのまま
     expect(options.defaultNS).toBe('global');
