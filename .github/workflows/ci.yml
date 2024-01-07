@@ -17,6 +17,15 @@ jobs:
         with:
           node-version: '20.10.0'
 
+      - name: Create dot env file
+        run: |
+          cat > .env <<EOF
+          TZ=Asia/Tokyo
+          FIREBASE_PROJECT_ID=${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_ADMIN_CLIENT_EMAIL=${{ secrets.FIREBASE_ADMIN_CLIENT_EMAIL }}
+          FIREBASE_ADMIN_PRIVATE_KEY=${{ secrets.FIREBASE_ADMIN_PRIVATE_KEY }}
+          EOF
+         
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
         with:
