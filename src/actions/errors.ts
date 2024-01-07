@@ -1,19 +1,22 @@
+import { z } from 'zod';
+
 export type ServerActionsErrorResponse = ValidationErrorResponse;
 
 type ValidationErrorResponse = {
   type: 'ValidationError';
-  message: string;
+  errors: z.ZodIssue[];
 };
-export class ValidationError extends Error {
-  readonly message: string;
 
-  constructor(message: string) {
+export class ValidationError extends Error {
+  readonly errors: z.ZodIssue[];
+
+  constructor(errorResponse: ValidationErrorResponse) {
     super('Validation Error');
-    this.message = message;
+    this.errors = errorResponse.errors;
   }
 
-  static createFromError(error: ValidationErrorResponse) {
-    return new ValidationError(error.message);
+  static createFromError(errorResponse: ValidationErrorResponse) {
+    return new ValidationError(errorResponse);
   }
 }
 

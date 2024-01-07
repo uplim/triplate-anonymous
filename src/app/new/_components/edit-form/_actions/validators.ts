@@ -3,12 +3,8 @@ import { z } from 'zod';
 import { Validator } from '@/actions/types';
 
 const schema = z.object({
-  name: z.string({
-    invalid_type_error: 'Invalid Name',
-  }),
-  password: z.string({
-    invalid_type_error: 'Invalid Password',
-  }),
+  name: z.string().max(20, 'nameは20文字以内にしてください'),
+  password: z.string().max(20, 'passwordは20文字以内にしてください'),
 });
 
 export const validator: Validator<z.infer<typeof schema>, FormData> = (
@@ -28,7 +24,10 @@ export const validator: Validator<z.infer<typeof schema>, FormData> = (
     if (error instanceof z.ZodError) {
       return {
         isParsed: false,
-        error: { type: 'ValidationError', message: error.message },
+        error: {
+          type: 'ValidationError',
+          errors: error.errors,
+        },
       };
     }
 
