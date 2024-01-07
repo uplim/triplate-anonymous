@@ -1,12 +1,14 @@
 'use client';
 
-import { redirect } from 'next/navigation';
-import { useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ValidationError } from '@/actions/errors';
 import { executeServerActions } from '@/actions/execute-server-actions';
 import { Button } from '@/components/button/button';
+import { FormError } from '@/components/form-error/form-error';
 import { InputText } from '@/components/input-text/input-text';
+import { findErrorMessage } from '@/functions/client/find-error-message';
 
 import { EditField } from '../edit-field/edit-field';
 
@@ -19,15 +21,25 @@ export const EditForm = () => {
 
   const [isPending, startTransition] = useTransition();
 
+  const [errorMessages, setErrorMessages] = useState({
+    name: '',
+    password: '',
+  });
+
   return (
     <form
       action={(formData) =>
         startTransition(async () => {
-          const { data } = await executeServerActions(() =>
-            createTriplink(formData)
-          );
-
-          redirect(`/triplinks/${data}`);
+          try {
+            await executeServerActions(() => createTriplink(formData));
+          } catch (error) {
+            if (error instanceof ValidationError) {
+              setErrorMessages({
+                name: findErrorMessage(error.errors, 'name'),
+                password: findErrorMessage(error.errors, 'password'),
+              });
+            }
+          }
         })
       }
       className={style.form}
@@ -40,6 +52,7 @@ export const EditForm = () => {
             defaultValue=""
             placeholder={t('new.edit-form.name.placeholder')}
           />
+          <FormError id="name" message={errorMessages.name} />
         </EditField>
         <EditField id="password" label={t('new.edit-form.password')}>
           <InputText
@@ -48,6 +61,7 @@ export const EditForm = () => {
             defaultValue=""
             placeholder={t('new.edit-form.password.placeholder')}
           />
+          <FormError id="password" message={errorMessages.password} />
         </EditField>
       </div>
       <Button variant="contained" size="md" aria-disabled={isPending}>
