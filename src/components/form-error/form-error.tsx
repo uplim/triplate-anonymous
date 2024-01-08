@@ -4,18 +4,18 @@ import style from './form-error.module.css';
 
 export type FormErrorProps = {
   id: string;
-  message?: string;
+  messages?: string[];
 };
 
-export const FormError = ({ id, message }: FormErrorProps) => {
+export const FormError = ({ id, messages }: FormErrorProps) => {
   return (
     <div
-      className={`${style.outer} ${message ? style.show : style.disable}`}
+      className={`${style.outer} ${messages ? style.show : style.disable}`}
       id={id}
       role="alert"
     >
       <HiOutlineExclamationCircle className={style.icon} size={20} />
-      <p className={style.message}>{message}</p>
+      <p className={style.message}>{messages?.join('\n')}</p>
     </div>
   );
 };

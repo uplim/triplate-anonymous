@@ -43,18 +43,20 @@ export const EditForm = () => {
             id="name"
             name="name"
             defaultValue=""
+            aria-invalid={!!errors?.name}
             placeholder={t('new.edit-form.name.placeholder')}
           />
-          <FormError id="name" message={errors?.name?.join(' ')} />
+          <FormError id="name" messages={errors?.name} />
         </EditField>
         <EditField id="password" label={t('new.edit-form.password')}>
           <InputText
             id="password"
             name="password"
             defaultValue=""
+            aria-invalid={!!errors?.password}
             placeholder={t('new.edit-form.password.placeholder')}
           />
-          <FormError id="password" message={errors?.password?.join(' ')} />
+          <FormError id="password" messages={errors?.password} />
         </EditField>
       </div>
       <Button variant="contained" size="md" aria-disabled={isPending}>

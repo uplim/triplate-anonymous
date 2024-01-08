@@ -10,9 +10,9 @@
 }
 
 .message {
-  margin-top: 1px;
   font-size: var(--font-sm);
   line-height: 20px;
+  white-space: pre-wrap;
 }
 
 .show {

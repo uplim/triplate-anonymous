@@ -13,8 +13,8 @@ const meta: Meta<typeof FormError> = {
       description:
         '一意のid。エラーとinputフィールドは紐づける必要があるため、idは必須で受け取る',
     },
-    message: {
-      description: 'エラーの文言',
+    messages: {
+      description: 'エラーの文言を配列で受け取る',
     },
   },
   tags: ['autodocs'],
@@ -27,19 +27,19 @@ type Story = StoryObj<typeof FormError>;
 export const Default: Story = {
   args: {
     id: 'id',
-    message: '必須です',
+    messages: ['必須です'],
   },
 };
 
 export const WithInput: Story = {
-  render: ({ id, message }) => (
+  render: ({ id, messages }) => (
     <EditField id={id} label="表示される名前">
       <InputText id={id} defaultValue="" />
-      <FormError id={id} message={message} />
+      <FormError id={id} messages={messages} />
     </EditField>
   ),
   args: {
     id: 'id',
-    message: '必須です',
+    messages: ['必須です', '20文字以内にしてください'],
   },
 };
