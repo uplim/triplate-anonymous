@@ -3,8 +3,18 @@ import { z } from 'zod';
 import { Validator } from '@/actions/types';
 
 const schema = z.object({
-  name: z.string().max(20, 'nameは20文字以内にしてください'),
-  password: z.string().max(20, 'passwordは20文字以内にしてください'),
+  name: z
+    .string()
+    .min(1, '旅の名前は必須です')
+    .max(20, '旅の名前は20文字以内にしてください'),
+  password: z
+    .string()
+    .min(1, 'あいことばは必須です')
+    .max(20, 'あいことばは20文字以内にしてください')
+    .regex(
+      /^(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}$/i,
+      'あいことばは半角英数字混合で入力してください'
+    ),
 });
 
 export const validator: Validator<z.infer<typeof schema>, FormData> = (

@@ -8,7 +8,6 @@ import { executeServerActions } from '@/actions/execute-server-actions';
 import { Button } from '@/components/button/button';
 import { FormError } from '@/components/form-error/form-error';
 import { InputText } from '@/components/input-text/input-text';
-import { findErrorMessage } from '@/functions/client/find-error-message';
 
 import { EditField } from '../edit-field/edit-field';
 
@@ -21,10 +20,7 @@ export const EditForm = () => {
 
   const [isPending, startTransition] = useTransition();
 
-  const [errorMessages, setErrorMessages] = useState({
-    name: '',
-    password: '',
-  });
+  const [errors, setErrors] = useState<ValidationError['errors']>();
 
   return (
     <form
@@ -34,10 +30,7 @@ export const EditForm = () => {
             await executeServerActions(() => createTriplink(formData));
           } catch (error) {
             if (error instanceof ValidationError) {
-              setErrorMessages({
-                name: findErrorMessage(error.errors, 'name'),
-                password: findErrorMessage(error.errors, 'password'),
-              });
+              setErrors(error.errors);
             }
           }
         })
@@ -52,7 +45,7 @@ export const EditForm = () => {
             defaultValue=""
             placeholder={t('new.edit-form.name.placeholder')}
           />
-          <FormError id="name" message={errorMessages.name} />
+          <FormError id="name" message={errors?.name?.join(' ')} />
         </EditField>
         <EditField id="password" label={t('new.edit-form.password')}>
           <InputText
@@ -61,7 +54,7 @@ export const EditForm = () => {
             defaultValue=""
             placeholder={t('new.edit-form.password.placeholder')}
           />
-          <FormError id="password" message={errorMessages.password} />
+          <FormError id="password" message={errors?.password?.join(' ')} />
         </EditField>
       </div>
       <Button variant="contained" size="md" aria-disabled={isPending}>

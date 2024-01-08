@@ -4,11 +4,11 @@ export type ServerActionsErrorResponse = ValidationErrorResponse;
 
 type ValidationErrorResponse = {
   type: 'ValidationError';
-  errors: z.ZodError;
+  errors: z.typeToFlattenedError<any, string>['fieldErrors'];
 };
 
 export class ValidationError extends Error {
-  readonly errors: z.ZodError;
+  readonly errors: ValidationErrorResponse['errors'];
 
   constructor(errorResponse: ValidationErrorResponse) {
     super('Validation Error');

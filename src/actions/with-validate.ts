@@ -16,7 +16,7 @@ export const withValidate = <InferredData, QueryArg, ResultType = unknown>(
         isSuccess: false,
         error: {
           type: 'ValidationError',
-          errors: result.error,
+          errors: result.error.flatten((issue) => issue.message).fieldErrors,
         },
       };
     }
