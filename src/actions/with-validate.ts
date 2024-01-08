@@ -11,10 +11,13 @@ export const withValidate = <InferredData, QueryArg, ResultType = unknown>(
   return async (args: QueryArg): Promise<Result<ResultType>> => {
     const result = validator(args);
 
-    if (!result.isParsed) {
+    if (!result.success) {
       return {
         isSuccess: false,
-        error: result.error,
+        error: {
+          type: 'ValidationError',
+          errors: result.error,
+        },
       };
     }
 

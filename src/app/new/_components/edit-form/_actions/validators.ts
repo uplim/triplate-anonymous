@@ -10,29 +10,10 @@ const schema = z.object({
 export const validator: Validator<z.infer<typeof schema>, FormData> = (
   formData
 ) => {
-  try {
-    const res = schema.parse({
-      name: formData.get('name'),
-      password: formData.get('password'),
-    });
+  const res = schema.safeParse({
+    name: formData.get('name'),
+    password: formData.get('password'),
+  });
 
-    return {
-      isParsed: true,
-      data: res,
-    };
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return {
-        isParsed: false,
-        error: {
-          type: 'ValidationError',
-          errors: error.errors,
-        },
-      };
-    }
-
-    return {
-      isParsed: false,
-    };
-  }
+  return res;
 };

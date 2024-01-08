@@ -1,3 +1,5 @@
+import { z } from 'zod';
+
 import { ServerActionsErrorResponse } from './errors';
 
 /**
@@ -10,15 +12,9 @@ export type ServerAction<QueryArg = unknown, ResultType = unknown> = (
 /**
  * フォームバリデーションする関数
  */
-export type Validator<InferredData, QueryArg> = (formData: QueryArg) =>
-  | {
-      isParsed: true;
-      data: InferredData;
-    }
-  | {
-      isParsed: false;
-      error?: ServerActionsErrorResponse;
-    };
+export type Validator<InferredData, QueryArg> = (
+  formData: QueryArg
+) => z.SafeParseReturnType<InferredData, InferredData>;
 
 /**
  * Result型
