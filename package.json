@@ -1,5 +1,5 @@
 {
-  "name": "triplate-nologin",
+  "name": "triplate-anonymous",
   "version": "0.1.0",
   "private": true,
   "packageManager": "yarn@4.0.2",
@@ -47,7 +47,7 @@
     "@types/jest": "29.5.11",
     "@types/jsdom": "21.1.6",
     "@types/negotiator": "0.6.3",
-    "@types/node": "20.10.6",
+    "@types/node": "20.11.0",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
     "cross-env": "7.0.3",
@@ -64,7 +64,7 @@
     "typescript": "5.3.3"
   },
   "engines": {
-    "node": "20.10.0",
+    "node": "20.11.0",
     "npm": "use yarn instead",
     "yarn": "4.0.2"
   },

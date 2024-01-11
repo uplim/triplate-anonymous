@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 20.10.0
+      - name: Use Node.js 20.11.0
         uses: actions/setup-node@v4
         with:
-          node-version: '20.10.0'
+          node-version: '20.11.0'
 
       - name: Create dot env file
         run: |
@@ -25,7 +25,7 @@ jobs:
           FIREBASE_ADMIN_CLIENT_EMAIL=${{ secrets.FIREBASE_ADMIN_CLIENT_EMAIL }}
           FIREBASE_ADMIN_PRIVATE_KEY=${{ secrets.FIREBASE_ADMIN_PRIVATE_KEY }}
           EOF
-         
+
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
         with:
