@@ -6,6 +6,7 @@
     "streetsidesoftware.code-spell-checker",
     "hediet.vscode-drawio",
     "orta.vscode-jest",
-    "clinyong.vscode-css-modules"
+    "clinyong.vscode-css-modules",
+    "ms-vscode-remote.remote-containers"
   ]
 }
