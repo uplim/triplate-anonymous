@@ -14,7 +14,5 @@ type Props = {
 
 export const LocaleProvider = ({ children, locale }: Props) => {
   initI18next(locale);
-  return (
-    <LocaleContext.Provider value={locale}>{children}</LocaleContext.Provider>
-  );
+  return <LocaleContext.Provider value={locale}>{children}</LocaleContext.Provider>;
 };

@@ -3,9 +3,7 @@
 import { createServerActionsError } from './errors';
 import { Result } from './types';
 
-export const executeServerActions = async <T>(
-  action: () => Promise<Result<T>>
-) => {
+export const executeServerActions = async <T>(action: () => Promise<Result<T>>) => {
   const res: Result<T> | undefined = await action();
 
   if (res?.isSuccess) {

@@ -10,7 +10,9 @@ const GlobalError = ({ reset }: GlobalErrorProps) => {
     <html lang="ja">
       <body>
         <h2>Something went wrong!</h2>
-        <button onClick={() => reset()}>Try again</button>
+        <button type="reset" onClick={() => reset()}>
+          Try again
+        </button>
       </body>
     </html>
   );

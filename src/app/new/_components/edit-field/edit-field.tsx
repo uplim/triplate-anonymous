@@ -9,19 +9,12 @@ export type EditFieldProps = {
   children: ReactNode;
 };
 
-export const EditField = ({
-  id,
-  label,
-  description,
-  children,
-}: EditFieldProps) => {
+export const EditField = ({ id, label, description, children }: EditFieldProps) => {
   return (
     <div>
       <label className={style.label} htmlFor={id} data-testid="edit-field">
         {label}
-        {description && (
-          <span className={style.description}>{description}</span>
-        )}
+        {description && <span className={style.description}>{description}</span>}
       </label>
       {children}
     </div>

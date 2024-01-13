@@ -36,8 +36,7 @@ jobs:
 
       - name: Lint, Format, Build and Test
         run: |
-          yarn lint
-          yarn format --check
+          yarn ci
           yarn type-check
           yarn test
           yarn build

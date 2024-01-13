@@ -1,12 +1,6 @@
 import 'server-only';
 
-import {
-  initializeApp,
-  cert,
-  ServiceAccount,
-  getApps,
-  getApp,
-} from 'firebase-admin/app';
+import { ServiceAccount, cert, getApp, getApps, initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getStorage } from 'firebase-admin/storage';
 import { cache } from 'react';

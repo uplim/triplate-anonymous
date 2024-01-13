@@ -7,8 +7,6 @@ describe('header', () => {
     render(<Header title="header title" />);
 
     // 見出しが表示される
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'header title'
-    );
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('header title');
   });
 });
