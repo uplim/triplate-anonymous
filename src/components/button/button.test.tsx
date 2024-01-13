@@ -18,9 +18,7 @@ describe('Button', () => {
     );
 
     // variantがcontainedでsizeがmdのクラスが当たっている
-    expect(screen.getByRole('button')).toHaveClass(
-      'base variant-contained size-md'
-    );
+    expect(screen.getByRole('button')).toHaveClass('base variant-contained size-md');
   });
   test('クリック時にonClickが呼び出される', async () => {
     const handleClick = jest.fn();

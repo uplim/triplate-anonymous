@@ -3,11 +3,7 @@ import nextJest from 'next/jest';
 const createJestConfig = nextJest({ dir: './' });
 
 const customJestConfig = {
-  moduleDirectories: [
-    'node_modules',
-    '<rootDir>/src/',
-    '<rootDir>/tests/unit/',
-  ],
+  moduleDirectories: ['node_modules', '<rootDir>/src/', '<rootDir>/tests/unit/'],
   moduleNameMapper: { '@/(.*)$': '<rootDir>/src/$1' },
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/tests/unit/helpers/jest-setup.ts'],

@@ -1,11 +1,11 @@
-import React from 'react';
-import type { Decorator, Preview } from '@storybook/react';
 import '@/styles/globals.css';
+import type { Decorator, Preview } from '@storybook/react';
 import i18next from 'i18next';
-import { initReactI18next } from 'react-i18next/initReactI18next';
-import { locales } from '../src/i18n/locales/ja';
-import { getI18nOptions } from '../src/functions/shared/i18n/get-i18n-options';
+import React from 'react';
 import { I18nextProvider } from 'react-i18next';
+import { initReactI18next } from 'react-i18next/initReactI18next';
+import { getI18nOptions } from '../src/functions/shared/i18n/get-i18n-options';
+import { locales } from '../src/i18n/locales/ja';
 
 const withI18nProvider: Decorator = (Story) => {
   i18next.use(initReactI18next).init({
@@ -34,9 +34,9 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['components', 'pages']
-      }
-    }
+        order: ['components', 'pages'],
+      },
+    },
   },
   globalTypes: {
     pseudo: {},

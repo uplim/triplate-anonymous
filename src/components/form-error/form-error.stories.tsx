@@ -3,15 +3,14 @@ import { InputText } from '../input-text/input-text';
 
 import { FormError } from './form-error';
 
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof FormError> = {
   title: 'components/FormError',
   component: FormError,
   argTypes: {
     id: {
-      description:
-        '一意のid。エラーとinputフィールドは紐づける必要があるため、idは必須で受け取る',
+      description: '一意のid。エラーとinputフィールドは紐づける必要があるため、idは必須で受け取る',
     },
     messages: {
       description: 'エラーの文言を配列で受け取る',

@@ -1,6 +1,6 @@
 import { InputText } from './input-text';
 
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof InputText> = {
   title: 'components/InputText',
@@ -19,8 +19,7 @@ const meta: Meta<typeof InputText> = {
       description: '初期値',
     },
     'aria-labelledby': {
-      description:
-        'この要素のラベルを参照するためのid。labelと同じidを指定する',
+      description: 'この要素のラベルを参照するためのid。labelと同じidを指定する',
     },
     'aria-describedby': {
       description:

@@ -1,12 +1,12 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "ms-playwright.playwright",
     "streetsidesoftware.code-spell-checker",
     "hediet.vscode-drawio",
     "orta.vscode-jest",
     "clinyong.vscode-css-modules",
-    "ms-vscode-remote.remote-containers"
+    "ms-vscode-remote.remote-containers",
+    "biomejs.biome"
   ]
 }

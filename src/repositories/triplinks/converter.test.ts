@@ -24,10 +24,7 @@ describe('converter', () => {
     });
 
     // updatedAtがnullの時はnullを送る
-    expect(converter.toFirestore({ ...data, updatedAt: null })).toHaveProperty(
-      'updatedAt',
-      null
-    );
+    expect(converter.toFirestore({ ...data, updatedAt: null })).toHaveProperty('updatedAt', null);
   });
 
   test('データ取得時、createdAtとnullでないupdatedAtをDate型に変換する', () => {

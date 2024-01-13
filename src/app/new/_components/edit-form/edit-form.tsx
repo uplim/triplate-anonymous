@@ -59,7 +59,7 @@ export const EditForm = () => {
           <FormError id="password" messages={errors?.password} />
         </EditField>
       </div>
-      <Button variant="contained" size="md" aria-disabled={isPending}>
+      <Button type="submit" variant="contained" size="md" aria-disabled={isPending}>
         {t('new.button')}
       </Button>
     </form>

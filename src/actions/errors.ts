@@ -20,9 +20,7 @@ export class ValidationError extends Error {
   }
 }
 
-export const createServerActionsError = (
-  error: ServerActionsErrorResponse | undefined
-) => {
+export const createServerActionsError = (error: ServerActionsErrorResponse | undefined) => {
   if (isValidationError(error)) {
     return ValidationError.createFromError(error);
   }

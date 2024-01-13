@@ -7,9 +7,7 @@ type HeaderProps = {
 export const Header = ({ title }: HeaderProps) => {
   return (
     <header className={style.header}>
-      <div className={style.container}>
-        {title && <h1 className={style.title}>{title}</h1>}
-      </div>
+      <div className={style.container}>{title && <h1 className={style.title}>{title}</h1>}</div>
     </header>
   );
 };

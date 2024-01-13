@@ -21,8 +21,7 @@ failOnConsole({
 });
 
 jest.mock('react', () => {
-  const testCache = <T extends (...args: unknown[]) => unknown>(func: T) =>
-    func;
+  const testCache = <T extends (...args: unknown[]) => unknown>(func: T) => func;
   const originalModule = jest.requireActual('react');
   return {
     ...originalModule,

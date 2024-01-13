@@ -1,4 +1,4 @@
-import { ChangeEventHandler, AriaAttributes } from 'react';
+import { AriaAttributes } from 'react';
 
 import style from './input-text.module.css';
 
@@ -7,10 +7,7 @@ export type InputTextProps = {
   name?: string;
   placeholder?: string;
   defaultValue: string;
-} & Pick<
-  AriaAttributes,
-  'aria-labelledby' | 'aria-invalid' | 'aria-describedby' | 'aria-disabled'
->;
+} & Pick<AriaAttributes, 'aria-labelledby' | 'aria-invalid' | 'aria-describedby' | 'aria-disabled'>;
 
 export const InputText = ({
   id,

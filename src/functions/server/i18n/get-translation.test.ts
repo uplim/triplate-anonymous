@@ -17,9 +17,7 @@ describe('getTranslation', () => {
     const pageKey = 'new.header.title';
 
     // nsを指定しない時はnsがglobalの文言を翻訳できる
-    expect(globalT(globalKey)).toBe(
-      'TRIPLATE - たびにいきたくなる旅程管理アプリ'
-    );
+    expect(globalT(globalKey)).toBe('TRIPLATE - たびにいきたくなる旅程管理アプリ');
     expect(globalT(pageKey)).toBe('new.header.title');
 
     // nsをpageにするとnsがpageの文言のみ翻訳できる

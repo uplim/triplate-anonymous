@@ -2,7 +2,7 @@ import { InputText } from '../../../../components/input-text/input-text';
 
 import { EditField } from './edit-field';
 
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof EditField> = {
   title: 'pages/new/EditField',

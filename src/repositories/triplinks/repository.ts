@@ -10,11 +10,7 @@ import { TriplinksType } from './types';
 const { db } = getFirebaseAdmin();
 
 export const findById = async (triplinkId: string) => {
-  const data = await db
-    .collection('triplinks')
-    .withConverter(converter)
-    .doc(triplinkId)
-    .get();
+  const data = await db.collection('triplinks').withConverter(converter).doc(triplinkId).get();
 
   return data.data();
 };

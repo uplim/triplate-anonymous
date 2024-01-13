@@ -1,11 +1,14 @@
 import { Button } from './button';
 
-import type { StoryObj, Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Button> = {
   title: 'components/Button',
   component: Button,
   argTypes: {
+    type: {
+      description: 'button、submit、resetが入る。デフォルトはbutton',
+    },
     variant: {
       description: '見た目の種類',
     },

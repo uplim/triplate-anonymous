@@ -4,7 +4,7 @@ import { Timestamp } from 'firebase-admin/firestore';
 
 import { Converter } from '@/repositories/types';
 
-import { TriplinksType, TriplinksDocumentType } from './types';
+import { TriplinksDocumentType, TriplinksType } from './types';
 
 export const converter: Converter<TriplinksDocumentType, TriplinksType> = {
   toFirestore: (data) => ({
