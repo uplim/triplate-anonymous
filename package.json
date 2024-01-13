@@ -63,8 +63,5 @@
     "node": "20.11.0",
     "npm": "use yarn instead",
     "yarn": "4.0.2"
-  },
-  "resolutions": {
-    "eslint-plugin-react-hooks": "4.6.0"
   }
 }
