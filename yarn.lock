@@ -5168,9 +5168,9 @@ __metadata:
   linkType: hard
 
 "acorn-walk@npm:^8.0.2, acorn-walk@npm:^8.1.1":
-  version: 8.3.1
-  resolution: "acorn-walk@npm:8.3.1"
-  checksum: a23d2f7c6b6cad617f4c77f14dfeb062a239208d61753e9ba808d916c550add92b39535467d2e6028280761ac4f5a904cc9df21530b84d3f834e3edef74ddde5
+  version: 8.3.2
+  resolution: "acorn-walk@npm:8.3.2"
+  checksum: 7e2a8dad5480df7f872569b9dccff2f3da7e65f5353686b1d6032ab9f4ddf6e3a2cb83a9b52cf50b1497fd522154dda92f0abf7153290cc79cd14721ff121e52
   languageName: node
   linkType: hard
 
@@ -7229,9 +7229,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.601":
-  version: 1.4.628
-  resolution: "electron-to-chromium@npm:1.4.628"
-  checksum: f6acc6b18eaa22e946d47dce25c194ff0f3aa4d1ca95e8a02f5a6d9bb99d25a6fadcb1da64fa6a6ea2de5b01cd3892f395a3f547b0ef1b4758087bf842e7e123
+  version: 1.4.630
+  resolution: "electron-to-chromium@npm:1.4.630"
+  checksum: dbe3b3437b00f978aa261e1ee9c80eebaba70dea601866b0d64e36f7146328c79bce8416652e4713cfeb0e22428cc7ec1751881860ec892fa32ec8de015d1a9e
   languageName: node
   linkType: hard
 
@@ -8418,8 +8418,8 @@ __metadata:
   linkType: hard
 
 "google-gax@npm:^4.0.4":
-  version: 4.0.5
-  resolution: "google-gax@npm:4.0.5"
+  version: 4.1.0
+  resolution: "google-gax@npm:4.1.0"
   dependencies:
     "@grpc/grpc-js": "npm:~1.9.6"
     "@grpc/proto-loader": "npm:^0.7.0"
@@ -8432,7 +8432,7 @@ __metadata:
     proto3-json-serializer: "npm:^2.0.0"
     protobufjs: "npm:7.2.5"
     retry-request: "npm:^7.0.0"
-  checksum: c2d579894bec7816a5d328e32ee1705c9c379064b090569a095b023019e9df0c5601d13291d8b05ed0ad1ae685d7eb211b7353492249fd3e439687aa6d78ccaf
+  checksum: 616121830e1781c40369112a9adf948bed05efcdf4474de82f195aad54f76c679f1d00ab96ebde2ffb219367cf3cbfacaf3715afbf440af109a164d6d08f3c0f
   languageName: node
   linkType: hard
 
@@ -12246,8 +12246,8 @@ __metadata:
   linkType: hard
 
 "react-docgen@npm:^7.0.0":
-  version: 7.0.2
-  resolution: "react-docgen@npm:7.0.2"
+  version: 7.0.3
+  resolution: "react-docgen@npm:7.0.3"
   dependencies:
     "@babel/core": "npm:^7.18.9"
     "@babel/traverse": "npm:^7.18.9"
@@ -12259,7 +12259,7 @@ __metadata:
     doctrine: "npm:^3.0.0"
     resolve: "npm:^1.22.1"
     strip-indent: "npm:^4.0.0"
-  checksum: 7107ecff1727614ee51a862e42b1dd46c86e528445b4488479f38bf64199bde18a94b8a4cb46bf0a3bb770851876cddc661b3654aeed4615c16eab6ef6b7f033
+  checksum: 74622750e60b287d2897a6887a2bd88303fadd84540247e162e9e970430864ae7b49152de043233d873a0aa7cffa406e5cd8fc1e8e2c277b8da73198b570f16b
   languageName: node
   linkType: hard
 
