@@ -1,5 +1,5 @@
 # https://github.com/AndreySenov/firebase-tools-docker/blob/main/Dockerfile.node20
-FROM node:18.19.0-slim
+FROM node:20.11.0-slim
 
 ENV HOME=/home/node
 EXPOSE 4000
