@@ -1964,12 +1964,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:0.5.2":
-  version: 0.5.2
-  resolution: "@formatjs/intl-localematcher@npm:0.5.2"
+"@formatjs/intl-localematcher@npm:0.5.4":
+  version: 0.5.4
+  resolution: "@formatjs/intl-localematcher@npm:0.5.4"
   dependencies:
     tslib: "npm:^2.4.0"
-  checksum: 4b3ae75470e3e53ffa39b2d46e65a2a4c9c4becbc0aac989b0694370e10c6687643660a045512d676509bc29b257fe5726fbb028de12f889be02c2d20b6527e6
+  checksum: c9ff5d34ca8b6fe59f8f303a3cc31a92d343e095a6987e273e5cc23f0fe99feb557a392a05da95931c7d24106acb6988e588d00ddd05b0934005aafd7fdbafe6
   languageName: node
   linkType: hard
 
@@ -13900,7 +13900,7 @@ __metadata:
   resolution: "triplate-anonymous@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.5.2"
-    "@formatjs/intl-localematcher": "npm:0.5.2"
+    "@formatjs/intl-localematcher": "npm:0.5.4"
     "@storybook/addon-essentials": "npm:7.6.8"
     "@storybook/addon-interactions": "npm:7.6.8"
     "@storybook/addon-links": "npm:7.6.8"
