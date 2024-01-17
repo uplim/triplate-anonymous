@@ -7,11 +7,7 @@ const schema = z.object({
   password: z
     .string()
     .min(1, 'あいことばは必須です')
-    .max(20, 'あいことばは20文字以内にしてください')
-    .regex(
-      /^(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}$/i,
-      'あいことばは半角英数字混合で入力してください'
-    ),
+    .max(20, 'あいことばは20文字以内にしてください'),
 });
 
 export const validator: Validator<z.infer<typeof schema>, FormData> = (formData) => {
