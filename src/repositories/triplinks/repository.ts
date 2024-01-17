@@ -4,28 +4,34 @@ import { randomUUID } from 'crypto';
 
 import { getFirebaseAdmin } from '@/repositories/get-firebase';
 
+import { cache } from 'react';
+import { executeFirebaseOperation } from '../execute-firebase-operation';
 import { converter } from './converter';
 import { TriplinksType } from './types';
 
 const { db } = getFirebaseAdmin();
 
-export const findById = async (triplinkId: string) => {
-  const data = await db.collection('triplinks').withConverter(converter).doc(triplinkId).get();
+export const findById = cache((triplinkId: string) =>
+  executeFirebaseOperation(async () => {
+    const data = await db.collection('triplinks').withConverter(converter).doc(triplinkId).get();
 
-  return data.data();
-};
+    return data.data();
+  })
+);
 
-export const create = async (data: Omit<TriplinksType, 'id'>) => {
-  const docId = randomUUID();
+export const create = cache((data: Omit<TriplinksType, 'id'>) =>
+  executeFirebaseOperation(async () => {
+    const docId = randomUUID();
 
-  await db
-    .collection('triplinks')
-    .withConverter(converter)
-    .doc(docId)
-    .create({
-      ...data,
-      id: docId,
-    });
+    await db
+      .collection('triplinks')
+      .withConverter(converter)
+      .doc(docId)
+      .create({
+        ...data,
+        id: docId,
+      });
 
-  return docId;
-};
+    return docId;
+  })
+);
