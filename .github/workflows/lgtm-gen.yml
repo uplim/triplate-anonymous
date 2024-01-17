@@ -1,0 +1,15 @@
+name: LGTM
+
+on:
+  pull_request_review:
+    types: [submitted]
+jobs:
+  lgtm:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: LGTM
+        uses: Doarakko/action-lgtmoon@v1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
