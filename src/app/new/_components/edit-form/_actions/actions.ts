@@ -6,6 +6,7 @@ import * as triplinksAPI from '@/repositories/triplinks/repository';
 import { validator } from './validators';
 
 import type { ServerAction } from '@/actions/types';
+import { FirebaseError } from '@/repositories/errors';
 
 /**
  * 旅程を新規に作成する
@@ -20,7 +21,20 @@ export const createTriplink: ServerAction<FormData, string> = withValidate(
         updatedAt: null,
       });
       return { isSuccess: true, data: id };
-    } catch {
+    } catch (error) {
+      if (error instanceof FirebaseError) {
+        return {
+          isSuccess: false,
+          error: {
+            type: 'FirebaseError',
+            errors: {
+              code: error.code,
+              key: error.key,
+            },
+          },
+        };
+      }
+
       return { isSuccess: false };
     }
   }

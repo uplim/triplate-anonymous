@@ -5,7 +5,7 @@ export const executeFirebaseOperation = async (operation: () => Promise<any>): P
     return await operation();
   } catch (error) {
     if (isFirebaseError(error)) {
-      throw new FirebaseError(error.code, error.message, error.stack);
+      throw new FirebaseError(error.code);
     }
 
     throw error;
