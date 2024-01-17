@@ -1,6 +1,6 @@
 import { FirebaseError, isFirebaseError } from './errors';
 
-export const executeFirebaseOperation = async (operation: () => Promise<any>): Promise<any> => {
+export const executeFirebaseOperation = async <T>(operation: () => Promise<T>) => {
   try {
     return await operation();
   } catch (error) {
