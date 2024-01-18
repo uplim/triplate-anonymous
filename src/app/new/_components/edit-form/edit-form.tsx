@@ -23,6 +23,8 @@ export const EditForm = () => {
   const [errors, setErrors] = useState<ValidationError['errors']>();
 
   const handleSave = async (formData: FormData) => {
+    setErrors({});
+
     try {
       const { data: id } = await executeServerActions(() => createTriplink(formData));
 
