@@ -22,19 +22,21 @@ export const EditForm = () => {
 
   const [errors, setErrors] = useState<ValidationError['errors']>();
 
+  const handleSave = async (formData: FormData) => {
+    try {
+      const { data: id } = await executeServerActions(() => createTriplink(formData));
+
+      window.location.href = `/triplinks/${id}`;
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        setErrors(error.errors);
+      }
+    }
+  };
+
   return (
     <form
-      action={(formData) =>
-        startTransition(async () => {
-          try {
-            await executeServerActions(() => createTriplink(formData));
-          } catch (error) {
-            if (error instanceof ValidationError) {
-              setErrors(error.errors);
-            }
-          }
-        })
-      }
+      action={(formData) => startTransition(async () => handleSave(formData))}
       className={style.form}
     >
       <div className={style['form-field']}>
