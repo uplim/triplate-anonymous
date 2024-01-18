@@ -1,7 +1,6 @@
 import 'server-only';
 
 import { randomUUID } from 'crypto';
-
 import { getFirebaseAdmin } from '@/repositories/get-firebase';
 
 import { cache } from 'react';
@@ -13,9 +12,9 @@ const { db } = getFirebaseAdmin();
 
 export const findById = cache((triplinkId: string) =>
   executeFirebaseOperation(async () => {
-    const data = await db.collection('triplinks').withConverter(converter).doc(triplinkId).get();
+    const res = await db.collection('triplinks').withConverter(converter).doc(triplinkId).get();
 
-    return data.data();
+    return res.data();
   })
 );
 
