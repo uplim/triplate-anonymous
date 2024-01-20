@@ -18,6 +18,13 @@ export async function generateMetadata(): Promise<Metadata> {
       default: t('common.triplate.title'),
     },
     description: t('common.triplate.description'),
+    themeColor: '#4272EF',
+    manifest: '/manifest.json',
+    icons: [
+      { url: '/favicon-32x32.png', rel: 'icon', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', rel: 'icon', sizes: '16x16', type: 'image/png' },
+      { url: '/safari-pinned-tab.svg', rel: 'mask-icon' },
+    ],
   };
 }
 
