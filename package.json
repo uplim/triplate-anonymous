@@ -31,7 +31,7 @@
     "react-i18next": "14.0.0",
     "react-icons": "5.0.1",
     "zod": "3.22.4",
-    "zustand": "4.4.7"
+    "zustand": "4.5.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.5.2",
