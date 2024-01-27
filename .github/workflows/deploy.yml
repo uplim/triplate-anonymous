@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths:
+      - next.config.js
+      - package.json
+      - src/**
 
 jobs:
   deploy:
