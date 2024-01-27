@@ -4,6 +4,7 @@
     "appspot",
     "autodocs",
     "biomejs",
+    "clsx",
     "corepack",
     "firestore",
     "formatjs",
