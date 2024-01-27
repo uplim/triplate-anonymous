@@ -1,6 +1,6 @@
 # https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-react-and-next
 
-name: ci
+name: CI
 
 on:
   push:

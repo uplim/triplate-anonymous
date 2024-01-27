@@ -1,4 +1,4 @@
-name: cleanup all caches
+name: Cleanup All Caches
 
 on:
   workflow_dispatch:
