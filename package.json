@@ -5,6 +5,7 @@
   "packageManager": "yarn@4.0.2",
   "scripts": {
     "dev": "scripts/start-firebase-emulator.sh && cross-env FIRESTORE_EMULATOR_HOST=localhost:8080 FIREBASE_STORAGE_EMULATOR_HOST=localhost:9199 next dev && ./scripts/stop-firebase-emulator.sh",
+    "dev:wiki": "yarn workspace wiki start -p 3001",
     "start": "next start",
     "lint": "biome check .",
     "lint:fix": "biome check --apply-unsafe .",
@@ -65,5 +66,8 @@
     "node": "20.11.0",
     "npm": "use yarn instead",
     "yarn": "4.0.2"
-  }
+  },
+  "workspaces": [
+    "wiki"
+  ]
 }
