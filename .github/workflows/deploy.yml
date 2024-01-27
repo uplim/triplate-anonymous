@@ -8,6 +8,7 @@ on:
       - next.config.js
       - package.json
       - src/**
+  workflow_dispatch:
 
 jobs:
   deploy:

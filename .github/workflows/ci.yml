@@ -4,6 +4,7 @@ name: ci
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   ci:
