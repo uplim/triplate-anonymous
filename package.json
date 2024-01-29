@@ -21,7 +21,7 @@
     "@formatjs/intl-localematcher": "0.5.4",
     "client-only": "0.0.1",
     "firebase-admin": "12.0.0",
-    "i18next": "23.7.20",
+    "i18next": "23.8.1",
     "i18next-resources-to-backend": "1.2.0",
     "immer": "10.0.3",
     "negotiator": "0.6.3",
