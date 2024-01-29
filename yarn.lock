@@ -12244,12 +12244,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:23.7.20":
-  version: 23.7.20
-  resolution: "i18next@npm:23.7.20"
+"i18next@npm:23.8.1":
+  version: 23.8.1
+  resolution: "i18next@npm:23.8.1"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 95460fff030860af7b5c65485c966fc5894372bff09f0f2f6b3fb72f053763d0b253aba977f52ddf7e32f763bf463efcf025da17a108cb1010b85fe3bd278cbd
+  checksum: f74ca2ead03e71bc8ca353c89e842b75042a52b52dcc5dfc14092469dcbc5d61f220fef536dfa95520de42baad0caa86c7a8abc1313a057ece9ba08ad8598bbf
   languageName: node
   linkType: hard
 
@@ -20126,7 +20126,7 @@ __metadata:
     client-only: "npm:0.0.1"
     cross-env: "npm:7.0.3"
     firebase-admin: "npm:12.0.0"
-    i18next: "npm:23.7.20"
+    i18next: "npm:23.8.1"
     i18next-resources-to-backend: "npm:1.2.0"
     immer: "npm:10.0.3"
     jest: "npm:29.7.0"
