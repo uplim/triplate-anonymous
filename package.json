@@ -2,7 +2,7 @@
   "name": "triplate-anonymous",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@4.0.2",
+  "packageManager": "yarn@4.1.0",
   "scripts": {
     "dev": "next dev",
     "dev:wiki": "yarn workspace wiki start -p 3001",
@@ -64,7 +64,7 @@
   "engines": {
     "node": "20.11.0",
     "npm": "use yarn instead",
-    "yarn": "4.0.2"
+    "yarn": "4.1.0"
   },
   "workspaces": [
     "wiki"
