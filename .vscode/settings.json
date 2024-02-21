@@ -16,5 +16,5 @@
   "files.trimTrailingWhitespace": true,
   "jest.jestCommandLine": "yarn test",
   "jest.rootPath": "./",
-  "jest.autoRun": { "watch": true }
+  "jest.runMode": "on-demand"
 }
