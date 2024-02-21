@@ -6,7 +6,7 @@ const config: Config = {
   title: 'TRIPLATE WIKI',
   favicon: 'img/favicon.ico',
 
-  url: 'https://triplate-wiki.vercel.com',
+  url: 'https://triplate-wiki.vercel.app',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
