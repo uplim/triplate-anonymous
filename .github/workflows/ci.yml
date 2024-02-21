@@ -40,4 +40,5 @@ jobs:
           yarn ci
           yarn type-check
           yarn test
+          yarn workspace wiki markdownlint
           yarn build
