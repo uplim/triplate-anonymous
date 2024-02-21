@@ -31,6 +31,14 @@
   line-height: 1.5;
 }
 
+.markdown h1:first-child {
+  font-size: 1.7em;
+  padding-bottom: 0.2em;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .markdown > h2 {
   margin-bottom: 1.1rem;
   border-bottom: 1px solid var(--ifm-color-emphasis-500);

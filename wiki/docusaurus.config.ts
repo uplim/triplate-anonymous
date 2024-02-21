@@ -43,7 +43,7 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'specs/index',
+          docId: 'specs/index/index',
           position: 'left',
           label: '仕様書',
         },
