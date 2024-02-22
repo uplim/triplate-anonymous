@@ -25,6 +25,8 @@ const config: Config = {
           routeBasePath: '',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/uplim/triplate-anonymous/edit/main/wiki',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         theme: {
           customCss: './style/custom.css',
