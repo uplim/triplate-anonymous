@@ -1,6 +1,8 @@
 import { ImageRow } from "/components/image-row";
+import { Image } from "/components/image";
 import sp from "./view-sp-header.png";
 import pc from "./view-pc-header.png";
+import backLink from "./back-link.png";
 
 # ヘッダー
 
@@ -14,6 +16,8 @@ import pc from "./view-pc-header.png";
 - [リロードボタン](#リロードボタン)
 
 ### バックリンク
+
+<Image src={backLink} size={100} />
 
 クリックすると、[マイページ](/specs/features/settings/mypage)へ遷移します。フォームに入力がある場合は、[確認モーダル](./confirm-modal)を表示します。
 
