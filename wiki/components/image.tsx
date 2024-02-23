@@ -14,6 +14,7 @@ export const Image = ({ src, size }: ImageProps) => {
         padding: '4px',
         borderRadius: '4px',
         border: '1px solid gray',
+        marginBottom: '4px'
       }}
     >
       <img alt="" src={src} />
