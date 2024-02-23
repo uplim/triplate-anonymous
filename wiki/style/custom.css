@@ -59,3 +59,7 @@
   margin-top: 1.8em;
   margin-bottom: 0.3em;
 }
+
+.markdown > p + ul {
+  margin-top: -16px;
+}
