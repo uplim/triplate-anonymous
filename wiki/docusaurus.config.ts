@@ -45,7 +45,7 @@ const config: Config = {
       items: [
         {
           type: 'doc',
-          docId: 'specs/index/index',
+          docId: 'specs/home/index',
           position: 'left',
           label: '仕様書',
         },
@@ -60,7 +60,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  } satisfies Preset.ThemeConfig,
+  } satisfies Preset.ThemeConfig
 };
 
 export default config;

@@ -8,6 +8,7 @@
     "clinyong.vscode-css-modules",
     "ms-vscode-remote.remote-containers",
     "biomejs.biome",
-    "DavidAnson.vscode-markdownlint"
+    "DavidAnson.vscode-markdownlint",
+    "unifiedjs.vscode-mdx"
   ]
 }
