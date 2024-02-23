@@ -3,6 +3,7 @@ import { Image } from "/components/image";
 import sp from "./images/view-sp-header.png";
 import pc from "./images/view-pc-header.png";
 import backLink from "./images/back-link.png";
+import heading from "./images/heading.png";
 
 # ヘッダー
 
@@ -12,13 +13,15 @@ import backLink from "./images/back-link.png";
 
 ### 構成
 
+- [見出し](#見出し)
 - [バックリンク](#バックリンク)
-- [リロードボタン](#リロードボタン)
+
+### 見出し
+
+<Image src={heading} width={300} />
 
 ### バックリンク
 
 <Image src={backLink} size={100} />
 
 クリックすると、必ず[マイページ](/specs/features/settings/mypage)へ遷移します。ブラウザの戻るボタンとは挙動が異なります。フォームに入力がある場合は、[確認モーダル](./confirm-modal)を表示します。
-
-### リロードボタン
