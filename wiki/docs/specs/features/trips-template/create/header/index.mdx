@@ -20,8 +20,18 @@ import heading from "./images/heading.png";
 
 <Image src={heading} width={300} />
 
+「旅程テンプレート作成」の文言が表示される。
+
 ### バックリンク
 
 <Image src={backLink} size={100} />
 
-クリックすると、必ず[マイページ](/specs/features/settings/mypage)へ遷移します。ブラウザの戻るボタンとは挙動が異なります。フォームに入力がある場合は、[確認モーダル](./confirm-modal)を表示します。
+クリックすると、必ず[マイページ](/specs/features/settings/mypage)へ遷移する。ブラウザの戻るボタンとは挙動が異なる。
+
+フォームに入力がある場合は、確認ダイアログを表示する。
+
+- 「作成せずに終了しますか？」
+  - 「OK」
+    - 入力中の内容は破棄され、[マイページ](/specs/features/settings/mypage)へ遷移する
+  - 「キャンセル」
+    - 確認ダイアログが閉じる
