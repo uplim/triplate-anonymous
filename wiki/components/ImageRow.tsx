@@ -8,6 +8,7 @@ export const ImageRow = ({ sp, pc }: ImageRowProps) => {
     <div
       style={{
         display: 'flex',
+        marginBottom: '16px',
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
