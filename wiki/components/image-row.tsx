@@ -10,6 +10,7 @@ export const ImageRow = ({ sp, pc }: ImageRowProps) => {
         display: 'flex',
         marginBottom: '16px',
         width: '100%',
+        padding: '5px',
         justifyContent: 'center',
         alignItems: 'center',
         border: '1px solid gray',
@@ -23,10 +24,7 @@ export const ImageRow = ({ sp, pc }: ImageRowProps) => {
           flexGrow: 1,
           height: 'auto',
           maxWidth: '28.79%',
-          borderRadius: '10px',
           borderRight: '1px solid gray',
-          borderTopRightRadius: '0',
-          borderBottomRightRadius: '0',
         }}
       />
       <img
@@ -36,7 +34,6 @@ export const ImageRow = ({ sp, pc }: ImageRowProps) => {
           flexGrow: 1,
           height: 'auto',
           maxWidth: '71.21%',
-          borderRadius: '10px',
         }}
       />
     </div>
