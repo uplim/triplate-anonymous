@@ -1,6 +1,6 @@
 type ImageProps = {
   src: string;
-  size: number;
+  size?: number;
   width?: number;
 };
 
