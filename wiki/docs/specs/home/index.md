@@ -23,7 +23,7 @@
 
 ### タイトル
 
-概要と、画面のスクリーンショットを添付してください。スクリーンショットは、`md`ファイルと同階層に配置し、414x768(sp)、1024x768(pc)の2つを添付してください。スクショには[Responsice Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb)がおすすめです。添付には`ImageRow`コンポーネントを利用してください。
+概要と、画面のスクリーンショットを添付してください。スクリーンショットは、`md`ファイルと同階層に配置し、414x896(sp)、1024x896(pc)の2つを添付してください。スクショには[Responsice Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb)がおすすめです。添付には`ImageRow`コンポーネントを利用してください。
 
 ### 外部仕様
 
