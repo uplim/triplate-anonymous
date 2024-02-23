@@ -1,0 +1,31 @@
+import sp from "./view-sp.png";
+import pc from "./view-pc.png";
+import { ImageRow } from "/components/image-row";
+
+# 旅程詳細
+
+<ImageRow sp={sp} pc={pc} />
+
+作成した旅程の詳細を確認できる機能です．メンバーの招待や共有，編集ができます．
+
+## 外部仕様
+
+### 構成
+
+- [ヘッダーナビゲーション](./header)
+- [メニュー](./menu)
+- [旅程](./trips)
+
+### URL
+
+`/trips/{id}`
+
+### タイトル
+
+たびの詳細
+
+### クエリパラメータ
+
+`id` : 旅程 ID
+
+## 内部仕様
