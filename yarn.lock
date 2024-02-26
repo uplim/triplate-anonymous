@@ -11508,12 +11508,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:23.9.0":
-  version: 23.9.0
-  resolution: "i18next@npm:23.9.0"
+"i18next@npm:23.10.0":
+  version: 23.10.0
+  resolution: "i18next@npm:23.10.0"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 10c0/84c31a825ea75b23ca6e2da43c9a27f0fc080a02bbe88d57b90998231803fe3575763b8f5e6fbff391994dc8420df1e34e833b646fb5682940ebe2e13a1e819f
+  checksum: 10c0/b6161075cfc2f3238e8e293306d70f173b5d5f4b7217d29ba15d4b70bd876911ccf15ca8fed238405c735c2a2e86e26658a17ea7cfd4040abd3100fef0a7c7d4
   languageName: node
   linkType: hard
 
@@ -19207,7 +19207,7 @@ __metadata:
     "@types/react-dom": "npm:18.2.19"
     client-only: "npm:0.0.1"
     cross-env: "npm:7.0.3"
-    i18next: "npm:23.9.0"
+    i18next: "npm:23.10.0"
     i18next-resources-to-backend: "npm:1.2.0"
     immer: "npm:10.0.3"
     jest: "npm:29.7.0"
