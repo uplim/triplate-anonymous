@@ -53,7 +53,7 @@ const config: Config = {
           type: 'doc',
           docId: 'help/home/index',
           position: 'left',
-          label: 'ヘルプ'
+          label: 'ヘルプ',
         },
         {
           href: 'https://github.com/uplim/triplate-anonymous',
