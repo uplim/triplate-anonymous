@@ -24,7 +24,7 @@ const config: Config = {
         docs: {
           routeBasePath: '',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/uplim/triplate-anonymous/edit/main/wiki',
+          editUrl: 'https://github.com/uplim/triplate-web/edit/main/wiki',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -56,7 +56,7 @@ const config: Config = {
           label: 'ヘルプ',
         },
         {
-          href: 'https://github.com/uplim/triplate-anonymous',
+          href: 'https://github.com/uplim/triplate-web',
           label: 'GitHub',
           position: 'right',
         },
