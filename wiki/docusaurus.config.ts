@@ -50,6 +50,12 @@ const config: Config = {
           label: '仕様書',
         },
         {
+          type: 'doc',
+          docId: 'help/home/index',
+          position: 'left',
+          label: 'ヘルプ'
+        },
+        {
           href: 'https://github.com/uplim/triplate-anonymous',
           label: 'GitHub',
           position: 'right',
