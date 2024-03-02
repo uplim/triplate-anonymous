@@ -9,5 +9,5 @@ $ yarn install
 ```
 
 :::caution
-Node.jsのバージョンが指定のバージョンでない場合依存ライブラリのインストールに失敗します。その場合は、[Node.jsのバージョンが更新されたら](/help/faq/update-nodejs)を参考にNode.jsのバージョンをアップデートしてください
+Node.jsのバージョンが指定のバージョンでない場合依存ライブラリのインストールに失敗します。その場合は、[Node.jsのバージョンが更新されたら](/help/faq/update-nodejs/)を参考にNode.jsのバージョンをアップデートしてください
 :::
