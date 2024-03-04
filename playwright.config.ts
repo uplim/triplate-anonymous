@@ -20,19 +20,28 @@ const config = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: process.env.CI ? 'blob' : 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'http://localhost:3001',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
 
     contextOptions: {
-      locale: 'ja-JP'
+      locale: 'ja-JP',
     },
     screenshot: 'only-on-failure',
+  },
+
+  globalSetup: require.resolve('./tests/helpers/playwright-global-setup.ts'),
+
+  /* Run your local dev server before starting the tests */
+  webServer: {
+    command: 'NODE_ENV=production yarn start -p 3001',
+    port: 3001,
+    reuseExistingServer: !process.env.CI,
   },
 
   /* Configure projects for major browsers */
@@ -81,4 +90,4 @@ const config = defineConfig({
   // },
 });
 
-export default config
+export default config;

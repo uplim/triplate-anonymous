@@ -5,7 +5,7 @@ import { getTranslation } from '@/functions/server/i18n/get-translation';
 
 import { LocaleProvider } from './_components/i18n/locale-provider';
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import '@/styles/globals.css';
 
@@ -18,7 +18,6 @@ export async function generateMetadata(): Promise<Metadata> {
       default: t('common.triplate.title'),
     },
     description: t('common.triplate.description'),
-    themeColor: '#4272EF',
     manifest: '/manifest.json',
     icons: [
       { url: '/favicon-32x32.png', rel: 'icon', sizes: '32x32', type: 'image/png' },
@@ -26,6 +25,10 @@ export async function generateMetadata(): Promise<Metadata> {
       { url: '/safari-pinned-tab.svg', rel: 'mask-icon' },
     ],
   };
+}
+
+export const viewport: Viewport = {
+  themeColor: '#4272EF',
 }
 
 export default async function RootLayout({
