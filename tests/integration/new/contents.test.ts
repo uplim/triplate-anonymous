@@ -7,7 +7,5 @@ test('サンプルのintegテスト', async ({ page }) => {
   // newに遷移する
   await newPage.goto();
 
-  await expect(page).toHaveTitle(
-    '新しい旅程の作成 - TRIPLATE - たびにいきたくなる旅程管理アプリ'
-  );
+  await expect(page).toHaveTitle('新しい旅程の作成 - TRIPLATE - たびにいきたくなる旅程管理アプリ');
 });

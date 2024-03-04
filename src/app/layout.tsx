@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const viewport: Viewport = {
   themeColor: '#4272EF',
-}
+};
 
 export default async function RootLayout({
   children,
