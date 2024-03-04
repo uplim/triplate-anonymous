@@ -31,7 +31,7 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "jest.jestCommandLine": "yarn test",
+  "jest.jestCommandLine": "yarn test:unit",
   "jest.rootPath": "./",
   "jest.runMode": "on-demand"
 }

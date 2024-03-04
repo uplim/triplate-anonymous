@@ -9,6 +9,7 @@
     "ms-vscode-remote.remote-containers",
     "biomejs.biome",
     "DavidAnson.vscode-markdownlint",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "ms-playwright.playwright"
   ]
 }
