@@ -39,6 +39,7 @@ jobs:
         run: |
           yarn ci
           yarn type-check
-          yarn test
+          yarn test:unit
+          yarn test:integration
           yarn workspace wiki markdownlint
           yarn build
