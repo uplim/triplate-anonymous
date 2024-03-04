@@ -5,7 +5,7 @@ test('サンプルのintegテスト', async ({ page }) => {
   const newPage = new NewPage(page);
 
   // newに遷移する
-  newPage.goto();
+  await newPage.goto();
 
   await expect(page).toHaveTitle(
     '新しい旅程の作成 - TRIPLATE - たびにいきたくなる旅程管理アプリ'
