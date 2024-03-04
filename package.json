@@ -11,7 +11,7 @@
     "lint:fix": "biome check --apply-unsafe .",
     "format": "biome format --write .",
     "ci": "biome ci .",
-    "test:unit": "jest",
+    "test:unit": "jest src/**/*",
     "test:integration": "playwright test tests/integration",
     "test:vrt": "playwright test tests/vrt --output vrt-actuals --project=chromium",
     "type-check": "tsc --pretty --noEmit && yarn workspace wiki type-check",
