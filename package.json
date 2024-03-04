@@ -13,7 +13,7 @@
     "ci": "biome ci .",
     "test:unit": "jest",
     "test:integration": "playwright test tests/integration",
-    "test:vrt": "playwright test tests/vrt",
+    "test:vrt": "playwright test tests/vrt --output vrt-actuals --project=chromium",
     "type-check": "tsc --pretty --noEmit && yarn workspace wiki type-check",
     "storybook": "storybook dev -p 6006",
     "build": "next build",
