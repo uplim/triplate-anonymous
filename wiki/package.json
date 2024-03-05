@@ -46,6 +46,6 @@
   "engines": {
     "node": "20.11.1",
     "npm": "use yarn instead",
-    "yarn": "4.1.0"
+    "yarn": "4.1.1"
   }
 }
