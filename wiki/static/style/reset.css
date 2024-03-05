@@ -1,0 +1,4 @@
+/* swaggerのページにdocusaurusのスタイルが当たってしまうのでnavなど最低限のスタイル以外を消す */
+body *:not(nav, a, svg, path, span, button, img) {
+  all: revert;
+}
