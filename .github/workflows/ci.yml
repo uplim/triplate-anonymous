@@ -35,8 +35,19 @@ jobs:
           cache-node-modules: true
           cache-install-state: true
 
-      - name: Install Playwright
-        run: npx playwright install --with-deps
+      - uses: actions/cache@v4
+        name: Check if Playwright browser is cached
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-1.42.1
+
+      - run: yarn install
+
+      - name: Install Playwright browser if not cached
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: yarn dlx playwright@1.42.1 install --with-deps
 
       - name: Lint and Type Check
         run: |
