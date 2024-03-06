@@ -43,8 +43,6 @@ jobs:
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-1.42.1
 
-      - run: yarn install
-
       - name: Install Playwright browser if not cached
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: yarn dlx playwright@1.42.1 install --with-deps
