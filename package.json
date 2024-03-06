@@ -59,7 +59,7 @@
     "storybook": "7.6.17",
     "storybook-addon-pseudo-states": "2.1.2",
     "ts-node": "10.9.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "engines": {
     "node": "20.11.1",
