@@ -27,7 +27,7 @@ jobs:
           FIREBASE_ADMIN_PRIVATE_KEY=${{ secrets.FIREBASE_ADMIN_PRIVATE_KEY }}
           EOF
 
-      - name: 📥 Monorepo install
+      - name: Monorepo install
         uses: ./.github/actions/yarn-nm-install
         with:
           cwd: '.'
@@ -35,11 +35,19 @@ jobs:
           cache-node-modules: true
           cache-install-state: true
 
-      - name: Lint, Format, Build and Test
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+
+      - name: Lint and Type Check
         run: |
           yarn ci
           yarn type-check
+          yarn workspace wiki markdownlint
+
+      - name: Run Tests
+        run: |
           yarn test:unit
           yarn test:integration
-          yarn workspace wiki markdownlint
-          yarn build
+
+      - name: Check Build
+        run: yarn build
