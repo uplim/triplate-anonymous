@@ -25,8 +25,6 @@ const config: Config = {
           routeBasePath: '',
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/uplim/triplate-web/edit/main/wiki',
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
         },
         theme: {
           customCss: './style/custom.css',
@@ -48,6 +46,11 @@ const config: Config = {
           docId: 'specs/home/index',
           position: 'left',
           label: '仕様書',
+        },
+        {
+          to: '/swagger',
+          position: 'left',
+          label: 'OpenAPI',
         },
         {
           type: 'doc',
