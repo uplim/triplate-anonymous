@@ -20,7 +20,7 @@ const config = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: process.env.CI ? 'blob' : 'html',
+  reporter: process.env.CI ? 'blob' : [['html', { open: 'never' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -35,6 +35,8 @@ const config = defineConfig({
     screenshot: 'only-on-failure',
   },
 
+  snapshotDir: './.vrt',
+  
   globalSetup: require.resolve('./tests/helpers/playwright-global-setup.ts'),
 
   /* Run your local dev server before starting the tests */

@@ -51,4 +51,4 @@ certs
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/actual_images/
+.vrt/*
