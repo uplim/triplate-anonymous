@@ -1,6 +1,10 @@
 name: 'VRT'
 
 on:
+  push:
+    paths:
+    - src/**/*.tsx
+    - src/**/*.ts
   workflow_dispatch:
 
 jobs:
