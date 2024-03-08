@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  vrt:
+    working_dir: /vrt
+    build:
+      context: ../../
+      dockerfile: dev/vrt/Dockerfile
+    volumes:
+      - ../../:/vrt
+      - node_modules:/vrt/node_modules
+volumes:
+  node_modules:
