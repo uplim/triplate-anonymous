@@ -1,6 +1,6 @@
 'use server';
 
-import { Result, ServerAction, Validator } from './types';
+import type { Result, ServerAction, Validator } from './types';
 
 // https://github.com/vercel/next.js/discussions/51139#discussioncomment-6149945
 

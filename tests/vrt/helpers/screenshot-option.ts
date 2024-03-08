@@ -1,4 +1,4 @@
-import { TestInfo } from '@playwright/test';
+import type { TestInfo } from '@playwright/test';
 
 export const screenshotOption = (
   title: string,

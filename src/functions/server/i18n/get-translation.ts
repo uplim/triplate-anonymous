@@ -1,12 +1,12 @@
 import 'server-only';
 
-import { FlatNamespace, createInstance } from 'i18next';
+import { type FlatNamespace, createInstance } from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { cache } from 'react';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
 import { getLocale } from '@/functions/server/i18n/get-locale';
-import { LocaleType, getI18nOptions } from '@/functions/shared/i18n';
+import { type LocaleType, getI18nOptions } from '@/functions/shared/i18n';
 
 const initI18next = async (locale: LocaleType, ns?: FlatNamespace) => {
   const i18nInstance = createInstance();

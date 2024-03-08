@@ -42,8 +42,8 @@ const config = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'NODE_ENV=production yarn start -p 3001',
-    port: 3001,
+    command: 'NODE_ENV=production yarn start -p 3002',
+    port: 3002,
     reuseExistingServer: !process.env.CI,
   },
 

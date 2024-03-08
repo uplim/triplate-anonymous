@@ -1,4 +1,9 @@
-import { AriaAttributes, ComponentPropsWithRef, MouseEventHandler, forwardRef } from 'react';
+import {
+  type AriaAttributes,
+  type ComponentPropsWithRef,
+  type MouseEventHandler,
+  forwardRef,
+} from 'react';
 
 import style from './button.module.css';
 

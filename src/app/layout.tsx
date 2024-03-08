@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import { getLocale } from '@/functions/server/i18n/get-locale';
 import { getTranslation } from '@/functions/server/i18n/get-translation';

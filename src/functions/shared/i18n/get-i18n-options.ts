@@ -1,6 +1,6 @@
-import { InitOptions } from 'i18next';
+import type { InitOptions } from 'i18next';
 
-import { AVAILABLE_LOCALES, DEFAULT_NS, LocaleType } from '@/functions/shared/i18n';
+import { AVAILABLE_LOCALES, DEFAULT_NS, type LocaleType } from '@/functions/shared/i18n';
 
 export const getI18nOptions = (language: LocaleType, ns = DEFAULT_NS): InitOptions => {
   return {

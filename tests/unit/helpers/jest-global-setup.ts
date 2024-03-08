@@ -1,4 +1,4 @@
-import { generateKeyPairSync } from 'crypto';
+import { generateKeyPairSync } from 'node:crypto';
 
 export default function setup() {
   process.env.TZ = 'Asia/Tokyo';

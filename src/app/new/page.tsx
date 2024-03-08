@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import { Header } from '@/components/header/header';
 import { getTranslation } from '@/functions/server/i18n/get-translation';

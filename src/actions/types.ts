@@ -1,6 +1,6 @@
-import { z } from 'zod';
+import type { z } from 'zod';
 
-import { ServerActionsErrorResponse } from './errors';
+import type { ServerActionsErrorResponse } from './errors';
 
 /**
  * Server Actionsの関数の型

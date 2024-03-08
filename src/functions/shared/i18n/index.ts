@@ -1,4 +1,4 @@
-import { FlatNamespace } from 'i18next';
+import type { FlatNamespace } from 'i18next';
 
 export type LocaleType = 'ja';
 
