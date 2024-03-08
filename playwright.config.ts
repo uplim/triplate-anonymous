@@ -36,7 +36,8 @@ const config = defineConfig({
   },
 
   snapshotDir: './.vrt',
-  
+  snapshotPathTemplate: '{snapshotDir}/{testFileName}/{arg}{ext}',
+
   globalSetup: require.resolve('./tests/helpers/playwright-global-setup.ts'),
 
   /* Run your local dev server before starting the tests */
