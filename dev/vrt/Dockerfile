@@ -16,6 +16,6 @@ RUN apt-get install -y --no-install-recommends fonts-noto-cjk \
  && rm -rf /var/lib/apt/lists/* \
  && fc-cache -vf
 
-RUN corepack enable && yarn install
+RUN corepack enable && yarn workspaces focus triplate-web
 
 COPY . $APP_ROOT
