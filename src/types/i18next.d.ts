@@ -1,6 +1,6 @@
 import 'i18next';
 
-import { locales } from '@/i18n/locales/ja';
+import type { locales } from '@/i18n/locales/ja';
 
 // next-i18nで型推論を有効にする
 declare module 'i18next' {

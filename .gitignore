@@ -46,3 +46,8 @@ certs
 # Generated files
 .docusaurus
 .cache-loader
+
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { Validator } from '@/actions/types';
+import type { Validator } from '@/actions/types';
 
 const schema = z.object({
   name: z.string().min(1, '旅の名前は必須です').max(20, '旅の名前は20文字以内にしてください'),

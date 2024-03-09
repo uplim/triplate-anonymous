@@ -1,9 +1,9 @@
 'use client';
 
-import { ReactNode, createContext } from 'react';
+import { type ReactNode, createContext } from 'react';
 
 import { initI18next } from '@/functions/client/i18n/init-i18next';
-import { DEFAULT_LOCALE, LocaleType } from '@/functions/shared/i18n';
+import { DEFAULT_LOCALE, type LocaleType } from '@/functions/shared/i18n';
 
 export const LocaleContext = createContext<LocaleType>(DEFAULT_LOCALE);
 

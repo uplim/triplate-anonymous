@@ -5,7 +5,7 @@ import Negotiator from 'negotiator';
 import { headers } from 'next/headers';
 import { cache } from 'react';
 
-import { AVAILABLE_LOCALES, DEFAULT_LOCALE, LocaleType } from '@/functions/shared/i18n';
+import { AVAILABLE_LOCALES, DEFAULT_LOCALE, type LocaleType } from '@/functions/shared/i18n';
 
 // https://nextjs.org/docs/app/building-your-application/routing/internationalization
 export const getLocale = cache((): LocaleType => {

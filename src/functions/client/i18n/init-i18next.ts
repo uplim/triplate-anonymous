@@ -4,7 +4,7 @@ import i18next from 'i18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next';
 
-import { AVAILABLE_LOCALES, LocaleType, getI18nOptions } from '@/functions/shared/i18n';
+import { AVAILABLE_LOCALES, type LocaleType, getI18nOptions } from '@/functions/shared/i18n';
 
 const runsOnServerSide = typeof window === 'undefined';
 

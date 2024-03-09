@@ -1,5 +1,5 @@
 import { render, renderHook } from '@testing-library/react';
-import { ReactNode, useContext } from 'react';
+import { type ReactNode, useContext } from 'react';
 
 import { initI18next } from '@/functions/client/i18n/init-i18next';
 

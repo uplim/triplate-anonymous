@@ -1,4 +1,4 @@
-import { AriaAttributes } from 'react';
+import type { AriaAttributes } from 'react';
 
 import style from './input-text.module.css';
 
