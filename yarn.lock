@@ -20069,7 +20069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swagger-client@npm:^3.25.4":
+"swagger-client@npm:^3.26.0":
   version: 3.26.0
   resolution: "swagger-client@npm:3.26.0"
   dependencies:
@@ -20092,9 +20092,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swagger-ui-react@npm:5.11.10":
-  version: 5.11.10
-  resolution: "swagger-ui-react@npm:5.11.10"
+"swagger-ui-react@npm:5.12.0":
+  version: 5.12.0
+  resolution: "swagger-ui-react@npm:5.12.0"
   dependencies:
     "@babel/runtime-corejs3": "npm:^7.24.0"
     "@braintree/sanitize-url": "npm:=7.0.0"
@@ -20125,7 +20125,7 @@ __metadata:
     reselect: "npm:^5.1.0"
     serialize-error: "npm:^8.1.0"
     sha.js: "npm:^2.4.11"
-    swagger-client: "npm:^3.25.4"
+    swagger-client: "npm:^3.26.0"
     url-parse: "npm:^1.5.10"
     xml: "npm:=1.0.1"
     xml-but-prettier: "npm:^1.0.1"
@@ -20133,7 +20133,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0 <19"
     react-dom: ">=16.8.0 <19"
-  checksum: 10c0/a5aba7419b35e542d8a749786e38ce3963833c75e26c8949c878464f27f935f255b2f6d5096c51059b1cb2c1f9c10f4b567e447aa3c6214e48cb1be3ed9af6fb
+  checksum: 10c0/87e245cd0d99355e27c18bed0f7eaa30de227510e2c8707eb4ca3a206def55e1ecc0cc2169991b8720a6c14292b9f4b062ad40c33f544627e4abc22514b7ea85
   languageName: node
   linkType: hard
 
@@ -21902,7 +21902,7 @@ __metadata:
     prism-react-renderer: "npm:2.3.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    swagger-ui-react: "npm:5.11.10"
+    swagger-ui-react: "npm:5.12.0"
     typescript: "npm:5.4.2"
   languageName: unknown
   linkType: soft
