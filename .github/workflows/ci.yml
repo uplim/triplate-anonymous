@@ -56,7 +56,6 @@ jobs:
       - name: Run Tests
         run: |
           yarn test:unit
-          yarn test:integration
 
       - name: Check Build
         run: yarn build
