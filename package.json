@@ -72,5 +72,7 @@
     "npm": "use yarn instead",
     "yarn": "4.1.1"
   },
-  "workspaces": ["wiki"]
+  "workspaces": [
+    "wiki"
+  ]
 }
