@@ -35,6 +35,9 @@ jobs:
           cache-node-modules: true
           cache-install-state: true
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Lint and Type Check
         run: |
           yarn ci
