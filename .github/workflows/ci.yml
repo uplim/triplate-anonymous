@@ -41,9 +41,5 @@ jobs:
           yarn type-check
           yarn workspace wiki markdownlint
 
-      - name: Run Tests
-        run: |
-          yarn test:unit
-
       - name: Check Build
         run: yarn build

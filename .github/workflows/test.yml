@@ -1,0 +1,42 @@
+name: Run Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20.11.1
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.11.1'
+
+      - name: Monorepo install
+        uses: ./.github/actions/yarn-nm-install
+        with:
+          cwd: '.'
+          enable-corepack: true
+          cache-node-modules: true
+          cache-install-state: true
+
+      - uses: actions/cache@v4
+        name: Check if Playwright browser is cached
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-1.42.1
+
+      - name: Install Playwright browser if not cached
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: yarn dlx playwright@1.42.1 install --with-deps
+
+      - name: Run Tests
+        run: |
+          yarn test:unit
+          yarn test:integration
