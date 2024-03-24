@@ -65,7 +65,7 @@
     "storybook": "8.0.0",
     "storybook-addon-pseudo-states": "2.2.1",
     "ts-node": "10.9.2",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3"
   },
   "engines": {
     "node": "20.11.1",
