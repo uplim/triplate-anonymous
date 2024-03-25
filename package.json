@@ -38,7 +38,7 @@
     "zustand": "4.5.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.2",
+    "@biomejs/biome": "1.6.3",
     "@playwright/test": "1.42.1",
     "@storybook/addon-essentials": "8.0.4",
     "@storybook/addon-interactions": "8.0.4",
